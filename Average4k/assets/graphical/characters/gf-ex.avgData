@@ -1,0 +1,12 @@
+sheet: Ex Tricky GF
+
+setAnimFrames[danceLeft]: GF Ex Tricky instance 1|0,1,2,3,4,5,6,7,8
+setAnimFrames[danceRight]: GF Ex Tricky instance 1|9,10,11,12,13,14,15,16,17,18,19
+
+animOffset[danceLeft]: 0,0
+animOffset[danceRight]: 0,0
+
+fps: 24
+# dont loop her animations
+loop: false
+defaultAnim: danceRight

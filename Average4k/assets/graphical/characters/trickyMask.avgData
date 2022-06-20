@@ -1,0 +1,21 @@
+sheet: TrickyMask
+
+setAnim[idle]: Idle
+setAnim[singUP]: Sing Up
+setAnim[singRIGHT]: Sing Right
+setAnim[singLEFT]: Sing Left
+setAnim[singDOWN]: Sing Down
+
+animOffset[idle]: 0,-117
+animOffset[singUP]: 93,-100
+animOffset[singRIGHT]: 16,-164
+animOffset[singLEFT]: 194,-95
+animOffset[singDOWN]: 32,-168
+
+icon: trickyMask
+
+# sprites were downscalled 0.5x
+offsetScale: 0.5
+
+fps: 24
+defaultAnim: idle

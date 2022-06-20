@@ -1,0 +1,63 @@
+# layer 6 is used for characters
+# layer 7+ is above characters
+# max layer is 12
+
+### sprites
+
+sprites[background4]: assets/graphical/tricky/fourth/Energywall.png
+spritesLayer[background4]: 1
+spritesPos[background4]: 1000,-600
+spritesScale[background4]: 0.6
+
+sprites[background]: assets/graphical/tricky/fourth/daBackground.png
+spritesLayer[background]: 1
+spritesPos[background]: -350,-355
+
+
+# this one is optional
+spritesScale[background]: 0.6
+# this one too, it sets the scrollFactor just like in flixel
+sprites[background2]: assets/graphical/tricky/red.png
+spritesLayer[background2]: 0
+spritesPos[background2]: -300,-400
+spritesScale[background2]: 2
+### characters
+
+p1: boyfriend
+p1Pos: 700,0
+# optional, this is for the times where bf's camera doesn't actually fit in the world or something
+p1ViewOffset: -75,-130
+# scale is always optional, but for characters it's recommended
+p1Scale: 0.4
+p2: trickyEx
+p2Pos: 45,-300
+p2Scale: 0.5
+# same for this one
+p2ViewOffset: 240,120
+
+# gf is the exact same
+gf: gf-ex
+gfPos: 485,-70
+gfScale: 0.4
+
+### viewpoint stuff
+# basically the camera
+
+
+viewPointZoom: 1.3
+viewPointPos: -50,-175
+
+camTintR: 170
+camTintG: 0
+camTintB: 0
+
+# DEATH NOTES
+
+# what'd you say your dad did for living? a detective huh?
+# oh please just call me detective.
+
+minesToDeath: true
+
+# events
+
+eventFile: nevEvents

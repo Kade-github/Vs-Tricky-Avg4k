@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Assets">
+      <UniqueIdentifier>{69dc1526-92fc-4c12-847e-9f574384459f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k">
+      <UniqueIdentifier>{176b08cb-98e0-4f35-a5f1-5a9dfb16afa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Structs">
+      <UniqueIdentifier>{316e8891-43e1-4ee5-8474-059a4a11bbf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Structs\Chart">
+      <UniqueIdentifier>{16627269-c2b1-47aa-965a-f4cb02e8a001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Structs\Chart\ChartParsers">
+      <UniqueIdentifier>{ae5ecdf7-ada5-4c04-9520-2415da6bf42d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Structs\Chart\ChartParsers\SM">
+      <UniqueIdentifier>{dffb58e5-349c-4796-8bcb-dc2e6e5adee4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Screens">
+      <UniqueIdentifier>{af1f5bdf-f698-477e-a1be-21eec5a29f7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Screens\Menus">
+      <UniqueIdentifier>{b6301c7e-c15d-47b0-9c20-2cf7d2e2a121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Screens\Menus\Gaming">
+      <UniqueIdentifier>{9abdccc3-ddcf-4104-aef0-b111accd722f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Utils">
+      <UniqueIdentifier>{8e3496b2-b21e-429b-97b7-d896efd24794}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Utils\Settings">
+      <UniqueIdentifier>{242663df-b141-4d30-90c7-2d5c3960b8ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Objects">
+      <UniqueIdentifier>{04e96f39-8ba8-41e9-b7ae-3826ee032126}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Objects\Renderers">
+      <UniqueIdentifier>{62171a5d-b7ec-42fd-896a-251a818642c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Objects\UIObjects">
+      <UniqueIdentifier>{32ad7e70-1c57-4b41-a225-9067bab9f56a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FontStuff">
+      <UniqueIdentifier>{6db03054-40d0-435e-96a0-29bcf631f0c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Utils\Easing">
+      <UniqueIdentifier>{a80dd974-cb76-43db-8b73-3070d4c3a31f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Utils\Tweening">
+      <UniqueIdentifier>{63e1e72e-90df-4eb9-8e8d-6da62c350621}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Screens\Menus\CreatingShit">
+      <UniqueIdentifier>{631c23dd-33ca-4ce2-8468-9b13b08da477}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Sound">
+      <UniqueIdentifier>{55a80bb6-cf7a-467d-91c0-a285bc8abe7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGL">
+      <UniqueIdentifier>{7503560c-4a06-41f7-9c05-583099daf937}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OpenGL\Renderer">
+      <UniqueIdentifier>{c74006df-4e09-47ce-9588-b10851a7111c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML Stuff">
+      <UniqueIdentifier>{6b5aacf7-d15a-426d-a967-2bbb1ff1f587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Objects\FNFShit">
+      <UniqueIdentifier>{67d55bdc-b266-467f-a593-7b9044d80617}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Objects\FNFShit\TextRead">
+      <UniqueIdentifier>{5b8de567-ae5a-434a-8bfa-a38a4f95abf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Objects\FNFShit\Events">
+      <UniqueIdentifier>{3193e508-e776-4a8a-b187-cb25256846e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Objects\FNFShit\Events\EventFunctions">
+      <UniqueIdentifier>{d676f410-77c4-490c-9dc8-afb5e46cdca4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Average4k\Objects\FNFShit\Events\EventFunctions\EvFunc">
+      <UniqueIdentifier>{8c61138d-2871-4653-aa38-acb432c91d7f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Average4k.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Source Files\Average4k\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="SMFile.cpp">
+      <Filter>Source Files\Average4k\Structs\Chart\ChartParsers\SM</Filter>
+    </ClCompile>
+    <ClCompile Include="Noteskin.cpp">
+      <Filter>Source Files\Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="Judge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NoteObject.cpp">
+      <Filter>Source Files\Average4k\Objects\Renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveFile.cpp">
+      <Filter>Source Files\Average4k\Utils\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="Chart.cpp">
+      <Filter>Source Files\Average4k\Structs\Chart</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay.cpp">
+      <Filter>Source Files\Average4k\Screens\Menus\Gaming</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Source Files\Average4k\Screens\Menus\Gaming</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingsMenu.cpp">
+      <Filter>Source Files\Average4k\Screens\Menus\Gaming</Filter>
+    </ClCompile>
+    <ClCompile Include="SongSelect.cpp">
+      <Filter>Source Files\Average4k\Screens\Menus\Gaming</Filter>
+    </ClCompile>
+    <ClCompile Include="ReceptorObject.cpp">
+      <Filter>Source Files\Average4k\Objects\Renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="Easing.cpp">
+      <Filter>Source Files\Average4k\Utils\Easing</Filter>
+    </ClCompile>
+    <ClCompile Include="TweenManager.cpp">
+      <Filter>Source Files\Average4k\Utils\Tweening</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCreator.cpp">
+      <Filter>Source Files\Average4k\Screens\Menus\CreatingShit</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>Source Files\Average4k\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="GL.cpp">
+      <Filter>Source Files\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files\OpenGL\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="glad.c">
+      <Filter>Source Files\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering.cpp">
+      <Filter>Source Files\OpenGL\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="stbi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AvgGroup.cpp">
+      <Filter>Source Files\Average4k\Objects\UIObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="pugixml.cpp">
+      <Filter>XML Stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="Offseter.cpp">
+      <Filter>Source Files\Average4k\Screens\Menus\CreatingShit</Filter>
+    </ClCompile>
+    <ClCompile Include="AvgCamera.cpp">
+      <Filter>Source Files\Average4k\Objects\UIObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="EventFunction.cpp">
+      <Filter>Source Files\Average4k\Objects\FNFShit\Events\EventFunctions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Source Files\Average4k\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="SMFile.h">
+      <Filter>Source Files\Average4k\Structs\Chart\ChartParsers\SM</Filter>
+    </ClInclude>
+    <ClInclude Include="Noteskin.h">
+      <Filter>Source Files\Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="Judge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NoteObject.h">
+      <Filter>Source Files\Average4k\Objects\Renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveFile.h">
+      <Filter>Source Files\Average4k\Utils\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="Chart.h">
+      <Filter>Source Files\Average4k\Structs\Chart</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Base64.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay.h">
+      <Filter>Source Files\Average4k\Screens\Menus\Gaming</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Source Files\Average4k\Screens\Menus\Gaming</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingsMenu.h">
+      <Filter>Source Files\Average4k\Screens\Menus\Gaming</Filter>
+    </ClInclude>
+    <ClInclude Include="SongSelect.h">
+      <Filter>Source Files\Average4k\Screens\Menus\Gaming</Filter>
+    </ClInclude>
+    <ClInclude Include="AvgSprite.h">
+      <Filter>Source Files\Average4k\Objects\UIObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>FontStuff</Filter>
+    </ClInclude>
+    <ClInclude Include="ReceptorObject.h">
+      <Filter>Source Files\Average4k\Objects\Renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="Easing.h">
+      <Filter>Source Files\Average4k\Utils\Easing</Filter>
+    </ClInclude>
+    <ClInclude Include="TweenManager.h">
+      <Filter>Source Files\Average4k\Utils\Tweening</Filter>
+    </ClInclude>
+    <ClInclude Include="AvgRect.h">
+      <Filter>Source Files\Average4k\Objects\UIObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCreator.h">
+      <Filter>Source Files\Average4k\Screens\Menus\CreatingShit</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AvgButton.h">
+      <Filter>Source Files\Average4k\Objects\UIObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>Source Files\Average4k\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="GL.h">
+      <Filter>Source Files\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Source Files\OpenGL\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering.h">
+      <Filter>Source Files\OpenGL\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Source Files\OpenGL\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="stbi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AvgGroup.h">
+      <Filter>Source Files\Average4k\Objects\UIObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="AvgCamera.h">
+      <Filter>Source Files\Average4k\Objects\UIObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers.h">
+      <Filter>Source Files\Average4k\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="AvgFrame.h">
+      <Filter>Source Files\Average4k\Objects\UIObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="pugiconfig.hpp">
+      <Filter>XML Stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="pugixml.hpp">
+      <Filter>XML Stuff</Filter>
+    </ClInclude>
+    <ClInclude Include="Offseter.h">
+      <Filter>Source Files\Average4k\Screens\Menus\CreatingShit</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>Source Files\Average4k\Objects\FNFShit</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Source Files\Average4k\Objects\FNFShit</Filter>
+    </ClInclude>
+    <ClInclude Include="Reader.h">
+      <Filter>Source Files\Average4k\Objects\FNFShit\TextRead</Filter>
+    </ClInclude>
+    <ClInclude Include="EventFile.h">
+      <Filter>Source Files\Average4k\Objects\FNFShit\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="EventFunction.h">
+      <Filter>Source Files\Average4k\Objects\FNFShit\Events\EventFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="DoStatic.h">
+      <Filter>Source Files\Average4k\Objects\FNFShit\Events\EventFunctions\EvFunc</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeCharacter.h">
+      <Filter>Source Files\Average4k\Objects\FNFShit\Events\EventFunctions\EvFunc</Filter>
+    </ClInclude>
+    <ClInclude Include="SetCharacterPosition.h">
+      <Filter>Source Files\Average4k\Objects\FNFShit\Events\EventFunctions\EvFunc</Filter>
+    </ClInclude>
+    <ClInclude Include="SetViewOffset.h">
+      <Filter>Source Files\Average4k\Objects\FNFShit\Events\EventFunctions\EvFunc</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayAnimation.h">
+      <Filter>Source Files\Average4k\Objects\FNFShit\Events\EventFunctions\EvFunc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Average4k.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="icon2.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

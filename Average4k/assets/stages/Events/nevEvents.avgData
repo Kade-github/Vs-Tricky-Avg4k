@@ -1,0 +1,4 @@
+createEvent: static
+eventBeat[static]: 0
+eventLength[static]: inf
+eventFunction[static]: doStatic

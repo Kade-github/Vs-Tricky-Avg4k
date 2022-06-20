@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="start.png">
+<!-- Created with Kades Custom Converter -->
+<SubTexture name="go0000" x="1" y="1" width="558" height="430" frameX="-0" frameY="-0" frameWidth="558" frameHeight="430"/>
+<SubTexture name="ready0000" x="1" y="433" width="757" height="364" frameX="-0" frameY="-0" frameWidth="757" frameHeight="364"/>
+<SubTexture name="set0000" x="561" y="1" width="702" height="322" frameX="-0" frameY="-0" frameWidth="702" frameHeight="322"/>
+</TextureAtlas>

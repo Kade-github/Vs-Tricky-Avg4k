@@ -1,0 +1,25 @@
+#pragma once
+#include <iostream>
+#include <algorithm>
+#include <glad/glad.h>
+#include <SDL.h>
+#include <SDL_ttf.h>
+#include <vector>
+#include <string>
+#include <filesystem>
+#include <limits.h>
+#include <zip.h>
+#include <fstream>
+#include <stdio.h>
+#include <msgpack.hpp>
+#include <stdlib.h>
+#include <SDL_image.h>
+#include <regex>
+#include <SDL_sound.h>
+#include <bass.h>
+#include <sstream>
+#include <string>
+#include <fstream>
+#include <filesystem>
+
+#include <io.h>

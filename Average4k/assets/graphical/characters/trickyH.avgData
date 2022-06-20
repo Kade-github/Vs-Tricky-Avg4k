@@ -1,0 +1,24 @@
+sheet: HTricky
+
+setAnim[idle]: Proper Idle
+setAnim[singUP]: Proper Up
+setAnim[singRIGHT]: Proper Right
+setAnim[singLEFT]: Proper Left
+setAnim[singDOWN]: Proper Down
+
+animOffset[singDOWN]: 29,-475
+animOffset[idle]: 0,0
+animOffset[singLEFT]: 122,4
+animOffset[singRIGHT]: 287,-310
+animOffset[singUP]: 266,-456
+
+# this one was scaled down by a LOT
+offsetScale: 0.3
+
+# shakes the screen when they sing
+shake: true
+
+icon: trickyH
+
+fps: 24
+defaultAnim: idle

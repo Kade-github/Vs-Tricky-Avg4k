@@ -1,0 +1,23 @@
+sheet: HCTricky
+
+setAnim[idle]: Classic HC Tricky Idle
+setAnim[singUP]: Classic HC Tricky Up
+setAnim[singRIGHT]: Classic HC Tricky Right
+setAnim[singLEFT]: Classic HC Tricky left
+setAnim[singDOWN]: Classic HC Tricky Down
+
+animOffset[singDOWN]: -221,-7
+animOffset[idle]: 0,0
+animOffset[singRIGHT]: -261,-70
+animOffset[singUP]: -184,348
+animOffset[singLEFT]: 130,-150
+
+offsetScale: 0.5
+
+# shakes the screen when they sing
+shake: true
+
+icon: trickyH
+
+fps: 24
+defaultAnim: idle

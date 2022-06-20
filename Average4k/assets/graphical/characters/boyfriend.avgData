@@ -1,0 +1,26 @@
+sheet: BoyFriend_Assets
+
+setAnim[idle]: BF idle dance
+setAnim[singUP]: BF NOTE UP
+setAnim[singRIGHT]: BF NOTE RIGHT
+setAnim[singLEFT]: BF NOTE LEFT
+setAnim[singDOWN]: BF NOTE DOWN
+setAnim[singUP-MISS]: BF NOTE UP MISS
+setAnim[singRIGHT-MISS]: BF NOTE RIGHT MISS
+setAnim[singLEFT-MISS]: BF NOTE LEFT MISS
+setAnim[singDOWN-MISS]: BF NOTE DOWN MISS
+
+animOffset[idle]: -5,0
+animOffset[singUP]: -29,27
+animOffset[singRIGHT]: -38,-7
+animOffset[singLEFT]: 12,-6
+animOffset[singDOWN]: -10,-50
+animOffset[singUP-MISS]: -29,27
+animOffset[singRIGHT-MISS]: -30,21
+animOffset[singLEFT-MISS]: 12,24
+animOffset[singDOWN-MISS]: -11,-19
+
+icon: boyfriend
+
+fps: 24
+defaultAnim: idle

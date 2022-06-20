@@ -1,0 +1,49 @@
+# layer 6 is used for characters
+# layer 7+ is above characters
+# max layer is 12
+
+### sprites
+
+sprites[background]: assets/graphical/tricky/island_but_dumb.png
+spritesLayer[background]: 1
+spritesPos[background]: -1100,-560
+# this one is optional
+spritesScale[background]: 0.9
+# this one too, it sets the scrollFactor just like in flixel
+sprites[background2]: assets/graphical/tricky/red.png
+spritesLayer[background2]: 0
+spritesPos[background2]: -145,-300
+spritesScale[background2]: 2
+### characters
+
+p1: boyfriend
+p1Pos: 900,250
+# optional, this is for the times where bf's camera doesn't actually fit in the world or something
+p1ViewOffset: -75,-130
+# scale is always optional, but for characters it's recommended
+p1Scale: 0.75
+p2: trickyMask
+p2Pos: 160,25
+p2Scale: 1.45
+# same for this one
+p2ViewOffset: 240,120
+
+# gf is the exact same
+gf: girlfriend
+gfPos: 415,10
+gfScale: 0.75
+
+### viewpoint stuff
+# basically the camera
+
+
+viewPointZoom: 1.03
+viewPointPos: 0,-35
+
+camTintR: 170
+camTintG: 0
+camTintB: 0
+
+# events
+
+eventFile: nevEvents

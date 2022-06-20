@@ -1,0 +1,65 @@
+# layer 6 is used for characters
+# layer 7+ is above characters
+# max layer is 12
+
+### sprites
+
+sprites[background]: assets/graphical/tricky/hellclown/island_but_red.png
+spritesLayer[background]: 1
+spritesPos[background]: -800,75
+sprites[background2]: assets/graphical/tricky/red.png
+spritesLayer[background2]: 0
+spritesPos[background2]: 0,-550
+spritesScale[background2]: 4
+# this one is optional
+spritesScale[background]: 0.9
+
+### hanker
+
+sprites[hank]: assets/graphical/tricky/hellclown/Hank.png
+spritesSparrow[hank]: assets/graphical/tricky/hellclown/Hank.xml
+spritesPos[hank]: 1035,575
+# name|Name in sparrow
+spritesSetAnim[hank]: idle|Hank
+# here for example, you can set offsets for these
+spritesSetAnimOffset[hank]: idle|0,0
+spritesSetFPS[hank]: 24
+spritesDefaultAnim[hank]: idle
+spritesLayer[hank]: 3
+spritesScale[hank]: 0.9
+### characters
+
+p1: boyfriendLast
+# previous 1350,850
+p1Pos: 600,850
+# optional, this is for the times where bf's camera doesn't actually fit in the world or something
+p1ViewOffset: 300,-100
+# scale is always optional, but for characters it's recommended
+p1Scale: 0.7
+p2: trickyHC
+# previous 350,-85
+p2Pos: 600,225
+p2Scale: 1.3
+# same for this one
+p2ViewOffset: 0,300
+
+# gf is the exact same
+gf: girlfriend3
+gfPos: 1200,715
+gfScale: 0.5
+
+### viewpoint stuff
+# basically the camera
+
+
+viewPointZoom: 1.03
+
+viewPointPos: 0,-35
+
+camTintR: 170
+camTintG: 0
+camTintB: 0
+
+# events
+
+eventFile: nevEvents

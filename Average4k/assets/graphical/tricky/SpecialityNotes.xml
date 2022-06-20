@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SpecialityNotes.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="blue alone death0000" x="3502" y="2404" width="343" height="196" frameX="-146" frameY="-59" frameWidth="635" frameHeight="255"/>
+	<SubTexture name="blue alone death0001" x="998" y="1491" width="495" height="243" frameX="-70" frameY="-12" frameWidth="635" frameHeight="255"/>
+	<SubTexture name="blue alone death0002" x="1278" y="259" width="565" height="249" frameX="-35" frameY="-6" frameWidth="635" frameHeight="255"/>
+	<SubTexture name="blue alone death0003" x="1278" y="0" width="635" height="255"/>
+	<SubTexture name="blue alone death0004" x="1847" y="259" width="565" height="249" frameX="-35" frameY="-6" frameWidth="635" frameHeight="255"/>
+	<SubTexture name="blue alone death0005" x="0" y="1710" width="495" height="243" frameX="-70" frameY="-12" frameWidth="635" frameHeight="255"/>
+	<SubTexture name="blue alone death0006" x="3502" y="2163" width="425" height="237" frameX="-105" frameY="-18" frameWidth="635" frameHeight="255"/>
+	<SubTexture name="green alone death0000" x="610" y="2407" width="343" height="196" frameX="-146" frameY="-59" frameWidth="635" frameHeight="255"/>
+	<SubTexture name="green alone death0001" x="499" y="1713" width="495" height="243" frameX="-70" frameY="-12" frameWidth="635" frameHeight="255"/>
+	<SubTexture name="green alone death0002" x="639" y="263" width="565" height="249" frameX="-35" frameY="-6" frameWidth="635" frameHeight="255"/>
+	<SubTexture name="green alone death0003" x="1917" y="0" width="635" height="255"/>
+	<SubTexture name="green alone death0004" x="0" y="264" width="565" height="249" frameX="-35" frameY="-6" frameWidth="635" frameHeight="255"/>
+	<SubTexture name="green alone death0005" x="2890" y="1713" width="495" height="243" frameX="-70" frameY="-12" frameWidth="635" frameHeight="255"/>
+	<SubTexture name="green alone death0006" x="2132" y="2299" width="425" height="237" frameX="-105" frameY="-18" frameWidth="635" frameHeight="255"/>
+	<SubTexture name="purple alone death0000" x="263" y="2361" width="343" height="201" frameX="-146" frameY="-59" frameWidth="635" frameHeight="260"/>
+	<SubTexture name="purple alone death0001" x="0" y="1458" width="495" height="248" frameX="-70" frameY="-12" frameWidth="635" frameHeight="260"/>
+	<SubTexture name="purple alone death0002" x="2556" y="0" width="565" height="254" frameX="-35" frameY="-6" frameWidth="635" frameHeight="260"/>
+	<SubTexture name="purple alone death0003" x="0" y="0" width="635" height="260"/>
+	<SubTexture name="purple alone death0004" x="3125" y="0" width="565" height="254" frameX="-35" frameY="-6" frameWidth="635" frameHeight="260"/>
+	<SubTexture name="purple alone death0005" x="2890" y="1461" width="495" height="248" frameX="-70" frameY="-12" frameWidth="635" frameHeight="260"/>
+	<SubTexture name="purple alone death0006" x="819" y="2161" width="425" height="242" frameX="-105" frameY="-18" frameWidth="635" frameHeight="260"/>
+	<SubTexture name="red alone death0000" x="2561" y="2361" width="343" height="200" frameX="-146" frameY="-59" frameWidth="635" frameHeight="259"/>
+	<SubTexture name="red alone death0001" x="499" y="1462" width="495" height="247" frameX="-70" frameY="-12" frameWidth="635" frameHeight="259"/>
+	<SubTexture name="red alone death0002" x="2556" y="258" width="565" height="253" frameX="-35" frameY="-6" frameWidth="635" frameHeight="259"/>
+	<SubTexture name="red alone death0003" x="639" y="0" width="635" height="259"/>
+	<SubTexture name="red alone death0004" x="3125" y="258" width="565" height="253" frameX="-35" frameY="-6" frameWidth="635" frameHeight="259"/>
+	<SubTexture name="red alone death0005" x="3389" y="1489" width="495" height="247" frameX="-70" frameY="-12" frameWidth="635" frameHeight="259"/>
+	<SubTexture name="red alone death0006" x="3073" y="2163" width="425" height="241" frameX="-105" frameY="-18" frameWidth="635" frameHeight="259"/>
+	<SubTexture name="blue alone fire0000" x="0" y="1957" width="269" height="397" frameX="-13" frameY="-11" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="blue alone fire0001" x="998" y="1738" width="281" height="419" frameX="-7" frameY="0" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="blue alone fire0002" x="2236" y="1896" width="278" height="399" frameX="-1" frameY="-23" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="blue alone fire0003" x="2332" y="1441" width="275" height="451" frameX="-5" frameY="-3" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="blue alone fire0004" x="2332" y="974" width="280" height="463" frameX="0" frameY="-3" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="blue alone fire0005" x="2900" y="994" width="278" height="463" frameX="-6" frameY="-10" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="blue alone fire0006" x="3464" y="1020" width="269" height="465" frameX="-7" frameY="-18" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="blue alone fire0007" x="2958" y="515" width="279" height="475" frameX="-2" frameY="-17" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="blue alone fire0008" x="0" y="517" width="277" height="470" frameX="-5" frameY="-22" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="blue alone fire0009" x="3694" y="0" width="277" height="506" frameX="-13" frameY="-19" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="blue alone fire0010" x="1770" y="512" width="293" height="455" frameX="-2" frameY="-18" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="blue alone fire0011" x="1248" y="2161" width="259" height="367" frameX="-18" frameY="-28" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="green alone fire0000" x="2800" y="1960" width="269" height="397" frameX="-13" frameY="-11" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="green alone fire0001" x="3674" y="1740" width="281" height="419" frameX="-7" frameY="0" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="green alone fire0002" x="1850" y="1900" width="278" height="399" frameX="-1" frameY="-23" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="green alone fire0003" x="1957" y="1445" width="275" height="451" frameX="-5" frameY="-3" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="green alone fire0004" x="284" y="991" width="280" height="463" frameX="0" frameY="-3" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="green alone fire0005" x="850" y="995" width="278" height="463" frameX="-6" frameY="-10" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="green alone fire0006" x="1405" y="1022" width="269" height="465" frameX="-7" frameY="-18" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="green alone fire0007" x="852" y="516" width="279" height="475" frameX="-2" frameY="-17" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="green alone fire0008" x="2051" y="971" width="277" height="470" frameX="-5" frameY="-22" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="green alone fire0009" x="1489" y="512" width="277" height="506" frameX="-13" frameY="-19" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="green alone fire0010" x="2661" y="515" width="293" height="455" frameX="-2" frameY="-18" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="green alone fire0011" x="0" y="2358" width="259" height="367" frameX="-18" frameY="-28" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="purple alone fire0000" x="273" y="1960" width="269" height="397" frameX="-13" frameY="-11" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="purple alone fire0001" x="1283" y="1738" width="281" height="419" frameX="-7" frameY="0" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="purple alone fire0002" x="2518" y="1896" width="278" height="399" frameX="-1" frameY="-23" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="purple alone fire0003" x="2611" y="1441" width="275" height="451" frameX="-5" frameY="-3" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="purple alone fire0004" x="2616" y="974" width="280" height="463" frameX="0" frameY="-3" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="purple alone fire0005" x="3182" y="994" width="278" height="463" frameX="-6" frameY="-10" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="purple alone fire0006" x="3737" y="1020" width="269" height="465" frameX="-7" frameY="-18" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="purple alone fire0007" x="3241" y="515" width="279" height="475" frameX="-2" frameY="-17" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="purple alone fire0008" x="281" y="517" width="277" height="470" frameX="-5" frameY="-22" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="purple alone fire0009" x="3694" y="510" width="277" height="506" frameX="-13" frameY="-19" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="purple alone fire0010" x="2067" y="512" width="293" height="455" frameX="-2" frameY="-18" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="purple alone fire0011" x="1511" y="2303" width="259" height="367" frameX="-18" frameY="-28" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="red alone fire0000" x="546" y="1960" width="269" height="397" frameX="-13" frameY="-11" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="red alone fire0001" x="3389" y="1740" width="281" height="419" frameX="-7" frameY="0" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="red alone fire0002" x="1568" y="1900" width="278" height="399" frameX="-1" frameY="-23" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="red alone fire0003" x="1678" y="1445" width="275" height="451" frameX="-5" frameY="-3" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="red alone fire0004" x="0" y="991" width="280" height="463" frameX="0" frameY="-3" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="red alone fire0005" x="568" y="995" width="278" height="463" frameX="-6" frameY="-10" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="red alone fire0006" x="1132" y="1022" width="269" height="465" frameX="-7" frameY="-18" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="red alone fire0007" x="569" y="516" width="279" height="475" frameX="-2" frameY="-17" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="red alone fire0008" x="1770" y="971" width="277" height="470" frameX="-5" frameY="-22" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="red alone fire0009" x="1208" y="512" width="277" height="506" frameX="-13" frameY="-19" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="red alone fire0010" x="2364" y="515" width="293" height="455" frameX="-2" frameY="-18" frameWidth="295" frameHeight="525"/>
+	<SubTexture name="red alone fire0011" x="1774" y="2303" width="259" height="367" frameX="-18" frameY="-28" frameWidth="295" frameHeight="525"/>
+</TextureAtlas>

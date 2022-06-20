@@ -1,0 +1,23 @@
+sheet: ExTricky
+
+setAnim[idle]: EX Idle
+setAnim[singUP]: EX Tricky Up
+setAnim[singRIGHT]: EX Tricky RIGHT 
+setAnim[singLEFT]: EX Tricky LEFT
+setAnim[singDOWN]: EX DOWN
+setAnim[spawn]: SPAWN Sprite
+
+animOffset[singDOWN]: -91,-118
+animOffset[idle]: 0,-117
+animOffset[singLEFT]: 145,-48
+animOffset[singRIGHT]: -248,-152
+animOffset[singUP]: -5,28
+animOffset[spawn]: -111,-121
+
+icon: ex
+
+# sprites were downscalled 0.6x
+offsetScale: 0.6
+
+fps: 24
+defaultAnim: idle

@@ -1,0 +1,28 @@
+sheet: GF_assets
+
+setAnim[cheer]: GF Cheer
+setAnim[singLEFT]: GF left note
+setAnim[singRIGHT]: GF Right Note
+setAnim[singUP]: GF Up Note
+setAnim[singDOWN]: GF Down Note
+# anything after the | pipe is the frames that it'll use to play it
+setAnimFrames[sad]: gf sad|0,1,2,3,4,5,6,7,8,9,10,11,12
+setAnimFrames[danceLeft]: GF Dancing Beat|30,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14
+setAnimFrames[danceRight]: GF Dancing Beat|15,16,17,18,19,20,21,22,23,24,25,26,27,28,29
+setAnim[scared]: GF FEAR
+
+animOffset[sad]: -2,-2
+animOffset[danceLeft]: 0,-9
+animOffset[danceRight]: 0,-9
+animOffset[singUP]: 0,4
+animOffset[singRIGHT]: 0,-20
+animOffset[singLEFT]: 0,-19
+animOffset[singDOWN]: 0,-20
+animOffset[hairBlow]: 45,-8
+animOffset[hairFall]: 0,-9
+animOffset[scared]: -2,-17
+
+fps: 24
+# dont loop her animations
+loop: false
+defaultAnim: danceRight

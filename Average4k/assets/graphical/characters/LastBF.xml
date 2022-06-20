@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="LastBF.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Last BF Down0000" x="2309" y="2137" width="395" height="272" frameX="0" frameY="-53" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0001" x="2728" y="2127" width="390" height="279" frameX="-10" frameY="-46" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0002" x="307" y="2207" width="383" height="279" frameX="-10" frameY="-46" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0003" x="3182" y="2100" width="381" height="291" frameX="-15" frameY="-34" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0004" x="307" y="1866" width="375" height="300" frameX="-15" frameY="-25" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0005" x="2864" y="1094" width="381" height="310" frameX="-15" frameY="-15" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0006" x="3594" y="751" width="375" height="320" frameX="-15" frameY="-5" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0007" x="1496" y="403" width="378" height="321" frameX="-17" frameY="-4" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0008" x="1833" y="749" width="371" height="325" frameX="-17" frameY="0" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0009" x="1973" y="2683" width="376" height="272" frameX="-18" frameY="-53" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0010" x="0" y="2825" width="368" height="263" frameX="-19" frameY="-62" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0011" x="3030" y="2728" width="375" height="272" frameX="-19" frameY="-53" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0012" x="1035" y="2825" width="368" height="263" frameX="-19" frameY="-62" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0013" x="2353" y="2744" width="375" height="272" frameX="-19" frameY="-53" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0014" x="1407" y="2881" width="368" height="263" frameX="-19" frameY="-62" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0015" x="3409" y="2783" width="375" height="272" frameX="-19" frameY="-53" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0016" x="1779" y="2959" width="368" height="263" frameX="-19" frameY="-62" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0017" x="3409" y="2783" width="375" height="272" frameX="-19" frameY="-53" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0018" x="1779" y="2959" width="368" height="263" frameX="-19" frameY="-62" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down0019" x="3409" y="2783" width="375" height="272" frameX="-19" frameY="-53" frameWidth="400" frameHeight="325"/>
+	<SubTexture name="Last BF Down Miss0000" x="987" y="2175" width="392" height="274" frameX="-14" frameY="0" frameWidth="410" frameHeight="292"/>
+	<SubTexture name="Last BF Down Miss0001" x="638" y="2784" width="393" height="253" frameX="-10" frameY="-21" frameWidth="410" frameHeight="292"/>
+	<SubTexture name="Last BF Down Miss0002" x="638" y="2784" width="393" height="253" frameX="-10" frameY="-21" frameWidth="410" frameHeight="292"/>
+	<SubTexture name="Last BF Down Miss0003" x="3590" y="1435" width="410" height="281" frameX="0" frameY="-11" frameWidth="410" frameHeight="292"/>
+	<SubTexture name="Last BF Down Miss0004" x="3590" y="1435" width="410" height="281" frameX="0" frameY="-11" frameWidth="410" frameHeight="292"/>
+	<SubTexture name="Last BF Down Miss0005" x="2266" y="2413" width="394" height="266" frameX="-8" frameY="-19" frameWidth="410" frameHeight="292"/>
+	<SubTexture name="Last BF Down Miss0006" x="2266" y="2413" width="394" height="266" frameX="-8" frameY="-19" frameWidth="410" frameHeight="292"/>
+	<SubTexture name="Last BF Down Miss0007" x="2266" y="2413" width="394" height="266" frameX="-8" frameY="-19" frameWidth="410" frameHeight="292"/>
+	<SubTexture name="Last BF Down Miss0008" x="2266" y="2413" width="394" height="266" frameX="-8" frameY="-19" frameWidth="410" frameHeight="292"/>
+	<SubTexture name="Last BF Down Miss0009" x="2266" y="2413" width="394" height="266" frameX="-8" frameY="-19" frameWidth="410" frameHeight="292"/>
+	<SubTexture name="Last BF Idle0000" x="1356" y="1095" width="354" height="331" frameX="-1" frameY="-15" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0001" x="995" y="1116" width="353" height="330" frameX="0" frameY="-16" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0002" x="1833" y="1078" width="356" height="330" frameX="0" frameY="-16" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0003" x="2069" y="1493" width="348" height="329" frameX="-3" frameY="-17" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0004" x="1714" y="1412" width="351" height="329" frameX="-3" frameY="-17" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0005" x="2875" y="1408" width="344" height="336" frameX="-5" frameY="-10" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0006" x="2875" y="1408" width="344" height="336" frameX="-5" frameY="-10" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0007" x="1352" y="1430" width="339" height="339" frameX="-8" frameY="-7" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0008" x="317" y="1144" width="342" height="340" frameX="-8" frameY="-6" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0009" x="995" y="1450" width="336" height="342" frameX="-10" frameY="-4" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0010" x="2193" y="1147" width="339" height="342" frameX="-10" frameY="-4" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0011" x="0" y="1488" width="334" height="344" frameX="-10" frameY="-2" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0012" x="3249" y="1139" width="337" height="345" frameX="-10" frameY="-1" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0013" x="2536" y="1408" width="335" height="346" frameX="-11" frameY="0" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0014" x="2536" y="1408" width="335" height="346" frameX="-11" frameY="0" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0015" x="2536" y="1408" width="335" height="346" frameX="-11" frameY="0" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF Idle0016" x="649" y="1491" width="334" height="343" frameX="-9" frameY="-3" frameWidth="356" frameHeight="346"/>
+	<SubTexture name="Last BF RIght Miss0000" x="3256" y="773" width="331" height="362" frameX="-12" frameY="-1" frameWidth="360" frameHeight="373"/>
+	<SubTexture name="Last BF RIght Miss0001" x="2911" y="377" width="355" height="355" frameX="-5" frameY="-6" frameWidth="360" frameHeight="373"/>
+	<SubTexture name="Last BF RIght Miss0002" x="2911" y="377" width="355" height="355" frameX="-5" frameY="-6" frameWidth="360" frameHeight="373"/>
+	<SubTexture name="Last BF RIght Miss0003" x="2239" y="0" width="347" height="373" frameX="0" frameY="0" frameWidth="360" frameHeight="373"/>
+	<SubTexture name="Last BF RIght Miss0004" x="2590" y="0" width="347" height="373" frameX="0" frameY="0" frameWidth="360" frameHeight="373"/>
+	<SubTexture name="Last BF RIght Miss0005" x="2941" y="0" width="347" height="373" frameX="0" frameY="0" frameWidth="360" frameHeight="373"/>
+	<SubTexture name="Last BF RIght Miss0006" x="2941" y="0" width="347" height="373" frameX="0" frameY="0" frameWidth="360" frameHeight="373"/>
+	<SubTexture name="Last BF RIght Miss0007" x="2941" y="0" width="347" height="373" frameX="0" frameY="0" frameWidth="360" frameHeight="373"/>
+	<SubTexture name="Last BF RIght Miss0008" x="2941" y="0" width="347" height="373" frameX="0" frameY="0" frameWidth="360" frameHeight="373"/>
+	<SubTexture name="Last BF RIght Miss0009" x="2941" y="0" width="347" height="373" frameX="0" frameY="0" frameWidth="360" frameHeight="373"/>
+	<SubTexture name="Last BF Right0000" x="1020" y="750" width="332" height="362" frameX="0" frameY="-2" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0001" x="3627" y="384" width="339" height="363" frameX="0" frameY="-1" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0002" x="3591" y="1075" width="333" height="356" frameX="0" frameY="-8" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0003" x="338" y="423" width="341" height="355" frameX="-2" frameY="-9" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0004" x="338" y="782" width="334" height="358" frameX="-2" frameY="-6" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0005" x="2911" y="736" width="341" height="354" frameX="-4" frameY="-10" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0006" x="2526" y="763" width="334" height="359" frameX="-4" frameY="-5" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0007" x="807" y="382" width="341" height="364" frameX="-6" frameY="0" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0008" x="0" y="423" width="334" height="363" frameX="-7" frameY="-1" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0009" x="1891" y="383" width="340" height="362" frameX="-8" frameY="-2" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0010" x="1496" y="728" width="333" height="363" frameX="-8" frameY="-1" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0011" x="1152" y="383" width="340" height="363" frameX="-8" frameY="-1" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0012" x="1152" y="383" width="340" height="363" frameX="-8" frameY="-1" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0013" x="1496" y="728" width="333" height="363" frameX="-8" frameY="-1" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0014" x="683" y="750" width="333" height="362" frameX="-8" frameY="-2" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0015" x="683" y="750" width="333" height="362" frameX="-8" frameY="-2" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0016" x="683" y="750" width="333" height="362" frameX="-8" frameY="-2" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0017" x="683" y="750" width="333" height="362" frameX="-8" frameY="-2" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0018" x="683" y="750" width="333" height="362" frameX="-8" frameY="-2" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Right0019" x="683" y="750" width="333" height="362" frameX="-8" frameY="-2" frameWidth="348" frameHeight="364"/>
+	<SubTexture name="Last BF Up0000" x="686" y="1838" width="297" height="365" frameX="-5" frameY="0" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0001" x="3567" y="2100" width="314" height="348" frameX="0" frameY="-17" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0002" x="3567" y="2100" width="314" height="348" frameX="0" frameY="-17" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0003" x="1946" y="2205" width="316" height="335" frameX="-2" frameY="-30" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0004" x="1659" y="2544" width="310" height="333" frameX="-2" frameY="-32" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0005" x="0" y="2490" width="315" height="331" frameX="-3" frameY="-34" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0006" x="0" y="2490" width="315" height="331" frameX="-3" frameY="-34" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0007" x="319" y="2490" width="315" height="329" frameX="-3" frameY="-36" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0008" x="319" y="2490" width="315" height="329" frameX="-3" frameY="-36" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0009" x="2708" y="2410" width="318" height="330" frameX="-1" frameY="-35" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0010" x="1342" y="2490" width="313" height="331" frameX="-1" frameY="-34" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0011" x="3122" y="2395" width="320" height="329" frameX="-1" frameY="-36" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0012" x="3122" y="2395" width="320" height="329" frameX="-1" frameY="-36" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0013" x="3446" y="2452" width="320" height="327" frameX="-1" frameY="-38" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0014" x="3446" y="2452" width="320" height="327" frameX="-1" frameY="-38" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0015" x="3770" y="2452" width="320" height="327" frameX="-1" frameY="-38" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0016" x="3446" y="2452" width="320" height="327" frameX="-1" frameY="-38" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0017" x="694" y="2453" width="320" height="327" frameX="-1" frameY="-38" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0018" x="3446" y="2452" width="320" height="327" frameX="-1" frameY="-38" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up0019" x="1018" y="2453" width="320" height="327" frameX="-1" frameY="-38" frameWidth="321" frameHeight="365"/>
+	<SubTexture name="Last BF Up Miss0000" x="1642" y="2125" width="300" height="361" frameX="-13" frameY="-20" frameWidth="327" frameHeight="399"/>
+	<SubTexture name="Last BF Up Miss0001" x="676" y="1116" width="315" height="371" frameX="-3" frameY="-10" frameWidth="327" frameHeight="399"/>
+	<SubTexture name="Last BF Up Miss0002" x="676" y="1116" width="315" height="371" frameX="-3" frameY="-10" frameWidth="327" frameHeight="399"/>
+	<SubTexture name="Last BF Up Miss0003" x="1560" y="0" width="327" height="399"/>
+	<SubTexture name="Last BF Up Miss0004" x="1560" y="0" width="327" height="399"/>
+	<SubTexture name="Last BF Up Miss0005" x="0" y="790" width="313" height="382" frameX="-8" frameY="-10" frameWidth="327" frameHeight="399"/>
+	<SubTexture name="Last BF Up Miss0006" x="0" y="790" width="313" height="382" frameX="-8" frameY="-10" frameWidth="327" frameHeight="399"/>
+	<SubTexture name="Last BF Up Miss0007" x="0" y="790" width="313" height="382" frameX="-8" frameY="-10" frameWidth="327" frameHeight="399"/>
+	<SubTexture name="Last BF Up Miss0008" x="0" y="790" width="313" height="382" frameX="-8" frameY="-10" frameWidth="327" frameHeight="399"/>
+	<SubTexture name="Last BF Up Miss0009" x="0" y="790" width="313" height="382" frameX="-8" frameY="-10" frameWidth="327" frameHeight="399"/>
+	<SubTexture name="Last BF left0000" x="1891" y="0" width="344" height="379" frameX="0" frameY="-2" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0001" x="3627" y="0" width="333" height="380" frameX="-9" frameY="-3" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0002" x="2239" y="377" width="333" height="380" frameX="-9" frameY="-3" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0003" x="2576" y="377" width="331" height="382" frameX="-11" frameY="-1" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0004" x="3292" y="0" width="331" height="383" frameX="-11" frameY="0" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0005" x="2208" y="761" width="314" height="382" frameX="-20" frameY="-1" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0006" x="3270" y="387" width="320" height="382" frameX="-20" frameY="-1" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0007" x="338" y="1488" width="307" height="374" frameX="-24" frameY="-8" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0008" x="3223" y="1488" width="306" height="375" frameX="-25" frameY="-7" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0009" x="0" y="1836" width="303" height="374" frameX="-26" frameY="-9" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0010" x="2875" y="1748" width="303" height="375" frameX="-26" frameY="-8" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0011" x="2421" y="1758" width="303" height="375" frameX="-26" frameY="-8" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0012" x="1335" y="1773" width="303" height="375" frameX="-26" frameY="-8" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0013" x="3533" y="1720" width="303" height="376" frameX="-26" frameY="-7" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0014" x="1695" y="1745" width="303" height="376" frameX="-26" frameY="-7" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0015" x="1695" y="1745" width="303" height="376" frameX="-26" frameY="-7" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0016" x="987" y="1796" width="303" height="375" frameX="-26" frameY="-8" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0017" x="2002" y="1826" width="303" height="375" frameX="-26" frameY="-8" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0018" x="2002" y="1826" width="303" height="375" frameX="-26" frameY="-8" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left0019" x="2002" y="1826" width="303" height="375" frameX="-26" frameY="-8" frameWidth="344" frameHeight="383"/>
+	<SubTexture name="Last BF left Miss0000" x="1211" y="0" width="345" height="379" frameX="-34" frameY="-22" frameWidth="409" frameHeight="420"/>
+	<SubTexture name="Last BF left Miss0001" x="807" y="0" width="400" height="378" frameX="0" frameY="-24" frameWidth="409" frameHeight="420"/>
+	<SubTexture name="Last BF left Miss0002" x="807" y="0" width="400" height="378" frameX="0" frameY="-24" frameWidth="409" frameHeight="420"/>
+	<SubTexture name="Last BF left Miss0003" x="404" y="0" width="399" height="419" frameX="-6" frameY="-1" frameWidth="409" frameHeight="420"/>
+	<SubTexture name="Last BF left Miss0004" x="404" y="0" width="399" height="419" frameX="-6" frameY="-1" frameWidth="409" frameHeight="420"/>
+	<SubTexture name="Last BF left Miss0005" x="0" y="0" width="400" height="419" frameX="-9" frameY="0" frameWidth="409" frameHeight="420"/>
+	<SubTexture name="Last BF left Miss0006" x="0" y="0" width="400" height="419" frameX="-9" frameY="0" frameWidth="409" frameHeight="420"/>
+	<SubTexture name="Last BF left Miss0007" x="0" y="0" width="400" height="419" frameX="-9" frameY="0" frameWidth="409" frameHeight="420"/>
+	<SubTexture name="Last BF left Miss0008" x="0" y="0" width="400" height="419" frameX="-9" frameY="0" frameWidth="409" frameHeight="420"/>
+	<SubTexture name="Last BF left Miss0009" x="0" y="0" width="400" height="419" frameX="-9" frameY="0" frameWidth="409" frameHeight="420"/>
+</TextureAtlas>

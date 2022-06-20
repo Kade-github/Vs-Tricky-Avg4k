@@ -1,0 +1,26 @@
+sheet: LastBF
+
+setAnim[idle]: Last BF Idle
+setAnim[singUP]: Last BF Up
+setAnim[singRIGHT]: Last BF Right
+setAnim[singLEFT]: Last BF left
+setAnim[singDOWN]: Last BF Down
+setAnim[singUP-MISS]: Last BF Up Miss
+setAnim[singRIGHT-MISS]: Last BF RIght Miss
+setAnim[singLEFT-MISS]: Last BF left Miss
+setAnim[singDOWN-MISS]: Last BF Down Miss
+
+animOffset[singDOWN]: 51,-21
+animOffset[singDOWN-MISS]: 69,-76
+animOffset[idle]: -5,0
+animOffset[singRIGHT-MISS]: -8,16
+animOffset[singRIGHT]: -23,18
+animOffset[singUP]: -28,15
+animOffset[singUP-MISS]: -12,26
+animOffset[singLEFT]: 61,37
+animOffset[singLEFT-MISS]: 84,54
+
+icon: boyfriend
+
+fps: 24
+defaultAnim: idle
