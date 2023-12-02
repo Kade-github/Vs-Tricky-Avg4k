@@ -7,30 +7,30 @@ song* SongSelect::selectedSong = NULL;
 int SongSelect::lastChecked = 0;
 
 void SongSelect::updateList() {
-	
+
 	listOfCharts.clear();
 
-		for (const auto& entry : std::filesystem::directory_iterator("assets/charts/"))
+	for (const auto& entry : std::filesystem::directory_iterator("assets/charts/"))
+	{
+		for (auto& e : std::filesystem::directory_iterator(entry.path()))
 		{
-			for (auto& e : std::filesystem::directory_iterator(entry.path()))
+			std::string bruh = e.path().string();
+
+			std::transform(bruh.begin(), bruh.end(), bruh.begin(),
+				[](unsigned char c) { return std::tolower(c); });
+			if (ends_with(bruh, ".sm"))
 			{
-				std::string bruh = e.path().string();
-
-				std::transform(bruh.begin(), bruh.end(), bruh.begin(),
-					[](unsigned char c) { return std::tolower(c); });
-				if (ends_with(bruh, ".sm"))
-				{
-					song s;
-					s.type = StepMania;
-					s.steam = false;
-					strcpy_s(s.folder, entry.path().string().c_str());
-					strcpy_s(s.path, bruh.c_str());
-					listOfCharts.push_back(s);
-				}
-
+				song s;
+				s.type = StepMania;
+				s.steam = false;
+				strcpy_s(s.folder, entry.path().string().c_str());
+				strcpy_s(s.path, bruh.c_str());
+				listOfCharts.push_back(s);
 			}
+
 		}
-	
+	}
+
 	selectedIndex = 0;
 	selectedDiffIndex = 0;
 
@@ -50,15 +50,15 @@ void SongSelect::updateList() {
 		songName->setText("> " + currentChart->meta.songName + " (" + diff + ") ");
 		songName->centerX();
 	}
-	
+
 }
 
 void SongSelect::update(Events::updateEvent event)
 {
-	
+
 	if (!currentChart)
 		return;
-	
+
 }
 
 void SongSelect::keyDown(SDL_KeyboardEvent event)
@@ -172,12 +172,12 @@ void SongSelect::keyDown(SDL_KeyboardEvent event)
 		case SDLK_RETURN:
 			if (!allowMove)
 				return;
-			
+
 			Game::instance->transitionToMenu(new Gameplay());
 			free(selectedSong);
 			break;
 		case SDLK_ESCAPE:
-			
+
 			Game::instance->transitionToMenu(new MainMenu());
 			free(selectedSong);
 			break;
@@ -187,7 +187,7 @@ void SongSelect::keyDown(SDL_KeyboardEvent event)
 
 SongSelect::SongSelect()
 {
-	
+
 }
 
 void SongSelect::create() {
@@ -233,7 +233,7 @@ void SongSelect::switchChart(song s)
 	SMFile* filee = new SMFile(s.path, s.folder, false);
 	currentChart = new Chart(filee->meta);
 	delete filee;
-	
+
 
 	if (selectedSong)
 	{

@@ -65,7 +65,7 @@ void callback()
 	but->fillColor = filC;
 	instance->add(but);
 	instance->buttons.push_back(but);
-	
+
 	Tweening::AvgButtonTweenable* but3 = new Tweening::AvgButtonTweenable(832, 500, 250, 45, "settings", 18, "arial", (clickCallback)changeMenu);
 	but3->create();
 	but3->text->border = false;
@@ -145,13 +145,13 @@ void MainMenu::create() {
 void call() {
 	MainMenu* instance = (MainMenu*)Game::currentMenu;
 	Channel* ch = SoundManager::getChannelByName("prevSong");
-	Tweening::TweenManager::createNewTween("thingBeat",instance->thing, Tweening::tt_scale, 19750 / ch->bpm, 1.1, 1, NULL, Easing::EaseInSine);
+	Tweening::TweenManager::createNewTween("thingBeat", instance->thing, Tweening::tt_scale, 19750 / ch->bpm, 1.1, 1, NULL, Easing::EaseInSine);
 }
 
 
 void MainMenu::update(Events::updateEvent event)
 {
-	
+
 	// I made this math myself
 	// it sucks
 	// parallax though
@@ -175,11 +175,11 @@ void MainMenu::update(Events::updateEvent event)
 				lastBeat = beat;
 				thing->scale = 1.1;
 			}
-			
+
 			if (thing->scale > 1.0)
 				thing->scale -= (Game::deltaTime * ((ch->bpm / 60) / 1000)) * 0.3;
 
-			
+
 		}
 	}
 
@@ -213,7 +213,7 @@ void MainMenu::update(Events::updateEvent event)
 			selectedIndex = index;
 		index++;
 	}
-	
+
 }
 
 void MainMenu::keyDown(SDL_KeyboardEvent event)

@@ -182,18 +182,18 @@ void Gameplay::createJudgement(judgement judge)
 	judg->setSparrow("assets/graphical/fnfBase/ui.xml");
 	switch (judge)
 	{
-		case judgement::Judge_sick:
-			judg->playAnim("sick", 1, false);
-			break;
-		case judgement::Judge_good:
-			judg->playAnim("good", 1, false);
-			break;
-		case judgement::Judge_bad:
-			judg->playAnim("bad", 1, false);
-			break;
-		case judgement::Judge_shit:
-			judg->playAnim("shit", 1, false);
-			break;
+	case judgement::Judge_sick:
+		judg->playAnim("sick", 1, false);
+		break;
+	case judgement::Judge_good:
+		judg->playAnim("good", 1, false);
+		break;
+	case judgement::Judge_bad:
+		judg->playAnim("bad", 1, false);
+		break;
+	case judgement::Judge_shit:
+		judg->playAnim("shit", 1, false);
+		break;
 	}
 
 	judg->scale = 0.7;
@@ -282,7 +282,7 @@ void Gameplay::miss(NoteObject* object)
 	{
 		// TODO: die
 		health = 0;
-	}	
+	}
 }
 
 Gameplay::Gameplay()
@@ -291,7 +291,7 @@ Gameplay::Gameplay()
 
 void Gameplay::create() {
 
-	
+
 	addCamera(Game::mainCamera);
 	initControls();
 
@@ -380,8 +380,8 @@ void Gameplay::create() {
 	for (int i = 0; i < 4; i++)
 	{
 		AvgSprite* r;
-		float x = ((Game::gameWidth / 2)) 
-			- ((104 * Game::save->GetDouble("Note Size") + 2) * 5) 
+		float x = ((Game::gameWidth / 2))
+			- ((104 * Game::save->GetDouble("Note Size") + 2) * 5)
 			+ ((104 * Game::save->GetDouble("Note Size") + 2) * i);
 		if (downscroll)
 			r = new AvgSprite(x, (Game::gameHeight / 2) + 250, NULL);
@@ -391,7 +391,7 @@ void Gameplay::create() {
 		r->tex = noteskin;
 		r->setSparrow("assets/graphical/fnfBase/Arrows.xml");
 
-		r->playAnim("arrow" + laneSuff(i),24,false);
+		r->playAnim("arrow" + laneSuff(i), 24, false);
 		r->staticView = true;
 
 		receptors.push_back(r);
@@ -401,8 +401,8 @@ void Gameplay::create() {
 	{
 		AvgSprite* r;
 
-		float x = (((Game::gameWidth / 2)) 
-			- ((104 * Game::save->GetDouble("Note Size") + 2) * 2) 
+		float x = (((Game::gameWidth / 2))
+			- ((104 * Game::save->GetDouble("Note Size") + 2) * 2)
 			+ ((104 * Game::save->GetDouble("Note Size") + 2) * i)) - 52;
 
 		if (downscroll)
@@ -413,7 +413,7 @@ void Gameplay::create() {
 		r->tex = noteskin;
 		r->setSparrow("assets/graphical/fnfBase/Arrows.xml");
 
-		r->playAnim("arrow" + laneSuff(i),24,false);
+		r->playAnim("arrow" + laneSuff(i), 24, false);
 
 		r->staticView = true;
 		receptors.push_back(r);
@@ -495,7 +495,7 @@ void Gameplay::create() {
 	if (downscroll)
 		songPosBar->y = (receptors[0]->y + (104 * Game::save->GetDouble("Note Size"))) + 12;
 
-	songPosOutline = new AvgRect(songPosBar->x,songPosBar->y, (receptors[3]->x + (104 * Game::save->GetDouble("Note Size"))) - receptors[0]->x, 24);
+	songPosOutline = new AvgRect(songPosBar->x, songPosBar->y, (receptors[3]->x + (104 * Game::save->GetDouble("Note Size"))) - receptors[0]->x, 24);
 	songPosOutline->border = true;
 	//add(songPosOutline);
 	songPosOutline->c.r = 255;
@@ -528,68 +528,68 @@ void Gameplay::update(Events::updateEvent event)
 	float thing = ((60 / SongSelect::currentChart->getSegmentFromTime(0).bpm) * 1000);
 	if (startTimeDur < thing)
 		startTimeDur += Game::deltaTime;
-		if (positionInSong > startTime)
+	if (positionInSong > startTime)
+	{
+		if (!play)
 		{
-			if (!play)
-			{
-				song->setPos(0);
-				song->setVolume(0.6);
-				song->play();
-				play = true;
-				lastBPM = 0;
-			}
+			song->setPos(0);
+			song->setVolume(0.6);
+			song->play();
+			play = true;
+			lastBPM = 0;
 		}
-		else
+	}
+	else
+	{
+		if (startTimeDur > thing)
 		{
-			if (startTimeDur > thing)
+			startTimeDur = 0;
+			switch (startProg)
 			{
-				startTimeDur = 0;
-				switch (startProg)
-				{
-				case 0:
-					startSound->play();
-					break;
-				case 1:
-					startSprite->offsetX = -85;
-					startSprite->offsetY = -100;
-					SoundManager::removeChannel("startChannel");
-					startSound = SoundManager::createChannel("assets/sounds/intro2.ogg", "startChannel");
-					startSprite->playAnim("ready", 24, false);
-					startSound->play();
-					break;
-				case 2:
-					SoundManager::removeChannel("startChannel");
-					startSound = SoundManager::createChannel("assets/sounds/intro1.ogg", "startChannel");
-					startSprite->playAnim("set", 24, false);
-					startSound->play();
-					break;
-				case 3:
-					startSprite->offsetX = -120;
-					startSprite->offsetY = -80;
-					SoundManager::removeChannel("startChannel");
-					startSound = SoundManager::createChannel("assets/sounds/introGo.ogg", "startChannel");
-					startSprite->playAnim("go", 24, false);
-					startSound->play();
-					break;
-				case 4:
-					SoundManager::removeChannel("startChannel");
-					startSound = SoundManager::createChannel("assets/sounds/intro3.ogg", "startChannel");
-					positionInSong = 0;
-					break;
-				}
-				if (positionInSong < 0 && startProg > 0 && startProg < 3)
-				{
-					startSprite->x = (Game::gameWidth / 2) - (startSprite->w / 2);
-					startSprite->y = (Game::gameHeight / 2) - (startSprite->h / 2);
-					startSprite->alpha = 1;
-				}
-				startProg++;
+			case 0:
+				startSound->play();
+				break;
+			case 1:
+				startSprite->offsetX = -85;
+				startSprite->offsetY = -100;
+				SoundManager::removeChannel("startChannel");
+				startSound = SoundManager::createChannel("assets/sounds/intro2.ogg", "startChannel");
+				startSprite->playAnim("ready", 24, false);
+				startSound->play();
+				break;
+			case 2:
+				SoundManager::removeChannel("startChannel");
+				startSound = SoundManager::createChannel("assets/sounds/intro1.ogg", "startChannel");
+				startSprite->playAnim("set", 24, false);
+				startSound->play();
+				break;
+			case 3:
+				startSprite->offsetX = -120;
+				startSprite->offsetY = -80;
+				SoundManager::removeChannel("startChannel");
+				startSound = SoundManager::createChannel("assets/sounds/introGo.ogg", "startChannel");
+				startSprite->playAnim("go", 24, false);
+				startSound->play();
+				break;
+			case 4:
+				SoundManager::removeChannel("startChannel");
+				startSound = SoundManager::createChannel("assets/sounds/intro3.ogg", "startChannel");
+				positionInSong = 0;
+				break;
 			}
-			
+			if (positionInSong < 0 && startProg > 0 && startProg < 3)
+			{
+				startSprite->x = (Game::gameWidth / 2) - (startSprite->w / 2);
+				startSprite->y = (Game::gameHeight / 2) - (startSprite->h / 2);
+				startSprite->alpha = 1;
+			}
+			startProg++;
 		}
+
+	}
 	if (startSprite->alpha > 0.0)
 		startSprite->alpha = lerp(1, 0, startTimeDur / thing);
-	
+
 
 	positionInSong += Game::deltaTime;
 	if (play)
@@ -620,7 +620,7 @@ void Gameplay::update(Events::updateEvent event)
 			Game::mainView->y += ((p2Y - (Game::gameHeight / 2)) - Game::mainView->y) * 0.01;
 		}
 
-		
+
 	}
 
 
@@ -703,7 +703,7 @@ void Gameplay::update(Events::updateEvent event)
 			return nn.del;
 			}),
 		judgeAnims.end());
-	
+
 
 	//SDL_SetRenderDrawColor(Game::renderer, 0, 0, 0, 150);
 	//SDL_RenderFillRectF(Game::renderer, &laneUnderway);
@@ -795,7 +795,7 @@ void Gameplay::update(Events::updateEvent event)
 	iconP2->x += (150 * (1 - iconP2->scale));
 	iconP2->y += (150 * (1 - iconP2->scale)) / 2;
 
-	
+
 	songPosBar->w = ((receptors[3]->x + (104 * Game::save->GetDouble("Note Size"))) - receptors[0]->x) * (positionInSong / (songLength));
 
 	// underlay for accuracy
@@ -825,200 +825,200 @@ void Gameplay::update(Events::updateEvent event)
 
 	if (notesToPlay.size() > 0)
 	{
-			note& n = notesToPlay[0];
-			if (n.beat < beat + 16 && !n.played && (n.type != Note_Tail)) // if its in 16 beats
+		note& n = notesToPlay[0];
+		if (n.beat < beat + 16 && !n.played && (n.type != Note_Tail)) // if its in 16 beats
+		{
+			n.played = true;
+			NoteObject* object = new NoteObject();
+			object->customDraw = true;
+
+			object->dontDeleteTex = true;
+			object->mine = n.type == Note_Mine;
+			if (!object->mine)
 			{
-				n.played = true;
-				NoteObject* object = new NoteObject();
-				object->customDraw = true;
-				
-				object->dontDeleteTex = true;
-				object->mine = n.type == Note_Mine;
-				if (!object->mine)
-				{
-					object->overrideH = 104;
-					object->overrideW = 104;
-				}
+				object->overrideH = 104;
+				object->overrideW = 104;
+			}
+			else
+			{
+				object->scale = 0.6;
+				if (stage->convertMinesToDeath)
+					object->offsetX = 135;
 				else
-				{
-					object->scale = 0.6;
-					if (stage->convertMinesToDeath)
-						object->offsetX = 135;
-					else
-						object->offsetX = 30;
-				}
-				if (object->mine)
-				{
-					object->tex = specialNoteskin;
-					object->setSparrow("assets/graphical/tricky/SpecialityNotes.xml");
-				}
+					object->offsetX = 30;
+			}
+			if (object->mine)
+			{
+				object->tex = specialNoteskin;
+				object->setSparrow("assets/graphical/tricky/SpecialityNotes.xml");
+			}
+			else
+			{
+				object->tex = noteskin;
+				object->setSparrow("assets/graphical/fnfBase/Arrows.xml");
+			}
+			object->connected = &n;
+			SDL_FRect rect;
+			object->wasHit = false;
+			object->clapped = false;
+			object->active = true;
+
+			bpmSegment preStopSeg = SongSelect::currentChart->getSegmentFromBeat(n.beat);
+
+			float stopOffset = SongSelect::currentChart->getStopOffsetFromBeat(n.beat);
+
+			double stopBeatOffset = (stopOffset / 1000) * (preStopSeg.bpm / 60);
+
+			object->stopOffset = stopBeatOffset;
+
+			object->beat = (double)n.beat + stopBeatOffset;
+			object->lane = n.lane;
+			object->staticView = true;
+
+			std::string suffix = " alone";
+
+			if (object->mine)
+			{
+				if (stage->convertMinesToDeath)
+					suffix = " alone death";
 				else
+					suffix = " alone fire";
+			}
+
+			switch (object->lane % 4)
+			{
+			case 0:
+				object->playAnim("purple" + suffix, 24, true);
+				break;
+			case 1:
+				object->playAnim("blue" + suffix, 24, true);
+				break;
+			case 2:
+				object->playAnim("green" + suffix, 24, true);
+				break;
+			case 3:
+				object->playAnim("red" + suffix, 24, true);
+				break;
+			}
+
+			object->type = n.type;
+			object->endTime = -1;
+			object->endBeat = -1;
+
+			bpmSegment noteSeg = SongSelect::currentChart->getSegmentFromBeat(object->beat);
+
+			object->time = SongSelect::currentChart->getTimeFromBeatOffset(object->beat, noteSeg);
+			rect.y = Game::gameHeight + 400;
+			rect.x = 0;
+			rect.w = 104 * Game::save->GetDouble("Note Size");
+			rect.h = 104 * Game::save->GetDouble("Note Size");
+			object->rect = rect;
+
+			note tail;
+
+			bpmSegment bruh = SongSelect::currentChart->getSegmentFromBeat(object->beat);
+
+			float wh = SongSelect::currentChart->getTimeFromBeat(beat, bruh);
+
+			float bps = (Game::save->GetDouble("scrollspeed") / 60) / Gameplay::rate;
+
+
+			if (object->type == Note_Head)
+			{
+				for (int i = 0; i < notesToPlay.size(); i++)
 				{
-					object->tex = noteskin;
-					object->setSparrow("assets/graphical/fnfBase/Arrows.xml");
+					note& nn = notesToPlay[i];
+					if (nn.type != Note_Tail)
+						continue;
+					if (nn.lane != object->lane)
+						continue;
+
+					bpmSegment npreStopSeg = SongSelect::currentChart->getSegmentFromBeat(nn.beat);
+
+					float nstopOffset = SongSelect::currentChart->getStopOffsetFromBeat(nn.beat);
+
+					double nstopBeatOffset = (nstopOffset / 1000) * (npreStopSeg.bpm / 60);
+
+					object->endBeat = nn.beat + nstopBeatOffset;
+
+					object->endTime = SongSelect::currentChart->getTimeFromBeatOffset(nn.beat + nstopBeatOffset, noteSeg);
+					tail = nn;
+					break;
 				}
-				object->connected = &n;
-				SDL_FRect rect;
-				object->wasHit = false;
-				object->clapped = false;
-				object->active = true;
+			}
 
-				bpmSegment preStopSeg = SongSelect::currentChart->getSegmentFromBeat(n.beat);
+			float time = SDL_GetTicks();
 
-				float stopOffset = SongSelect::currentChart->getStopOffsetFromBeat(n.beat);
+			if (object->type == Note_Head)
+			{
 
-				double stopBeatOffset = (stopOffset / 1000) * (preStopSeg.bpm / 60);
-
-				object->stopOffset = stopBeatOffset;
-
-				object->beat = (double) n.beat + stopBeatOffset;
-				object->lane = n.lane;
-				object->staticView = true;
-
-				std::string suffix = " alone";
-
-				if (object->mine)
+				for (int i = std::floorf(object->time); i < std::floorf(object->endTime); i++)
 				{
-					if (stage->convertMinesToDeath)
-						suffix = " alone death";
-					else
-						suffix = " alone fire";
-				}
+					bpmSegment holdSeg = SongSelect::currentChart->getSegmentFromTime(i);
 
-				switch (object->lane % 4)
-				{
-					case 0:
-						object->playAnim("purple" + suffix, 24, true);
-						break;
-					case 1:
-						object->playAnim("blue" + suffix, 24, true);
-						break;
-					case 2:
-						object->playAnim("green" + suffix, 24, true);
-						break;
-					case 3:
-						object->playAnim("red" + suffix, 24, true);
-						break;
-				}
+					double beat = SongSelect::currentChart->getBeatFromTimeOffset(i, holdSeg);
 
-				object->type = n.type;
-				object->endTime = -1;
-				object->endBeat = -1;
+					float whHold = SongSelect::currentChart->getTimeFromBeatOffset(beat, holdSeg);
 
-				bpmSegment noteSeg = SongSelect::currentChart->getSegmentFromBeat(object->beat);
+					float diff = whHold - (object->time);
 
-				object->time = SongSelect::currentChart->getTimeFromBeatOffset(object->beat, noteSeg);
-				rect.y = Game::gameHeight + 400;
-				rect.x = 0;
-				rect.w = 104 * Game::save->GetDouble("Note Size");
-				rect.h = 104 * Game::save->GetDouble("Note Size");
-				object->rect = rect;
+					float noteOffset = (bps * (diff / 1000)) * (104 * Game::save->GetDouble("Note Size"));
 
-				note tail;
-
-				bpmSegment bruh = SongSelect::currentChart->getSegmentFromBeat(object->beat);
-
-				float wh = SongSelect::currentChart->getTimeFromBeat(beat, bruh);
-
-				float bps = (Game::save->GetDouble("scrollspeed") / 60) / Gameplay::rate;
-
-
-				if (object->type == Note_Head)
-				{
-					for (int i = 0; i < notesToPlay.size(); i++)
+					float y = 0;
+					float yDiff = 0;
+					if (object->heldTilings.size() != 0)
 					{
-						note& nn = notesToPlay[i];
-						if (nn.type != Note_Tail)
-							continue;
-						if (nn.lane != object->lane)
-							continue;
-
-						bpmSegment npreStopSeg = SongSelect::currentChart->getSegmentFromBeat(nn.beat);
-
-						float nstopOffset = SongSelect::currentChart->getStopOffsetFromBeat(nn.beat);
-
-						double nstopBeatOffset = (nstopOffset / 1000) * (npreStopSeg.bpm / 60);
-
-						object->endBeat = nn.beat + nstopBeatOffset;
-						
-						object->endTime = SongSelect::currentChart->getTimeFromBeatOffset(nn.beat + nstopBeatOffset, noteSeg);
-						tail = nn;
-						break;
-					}
-				}
-
-				float time = SDL_GetTicks();
-
-				if (object->type == Note_Head)
-				{
-
-					for (int i = std::floorf(object->time); i < std::floorf(object->endTime); i++)
-					{
-						bpmSegment holdSeg = SongSelect::currentChart->getSegmentFromTime(i);
-
-						double beat = SongSelect::currentChart->getBeatFromTimeOffset(i, holdSeg);
-
-						float whHold = SongSelect::currentChart->getTimeFromBeatOffset(beat, holdSeg);
-
-						float diff = whHold - (object->time);
-
-						float noteOffset = (bps * (diff / 1000)) * (104 * Game::save->GetDouble("Note Size"));
-
-						float y = 0;
-						float yDiff = 0;
-						if (object->heldTilings.size() != 0)
-						{
-							if (downscroll)
-								y = object->rect.y - noteOffset;
-							else
-								y = object->rect.y + noteOffset;
-							yDiff = y - object->heldTilings.back().rect.y;
-						}
-						else
-						{
-							if (downscroll)
-								y = object->rect.y - noteOffset;
-							else
-								y = object->rect.y + noteOffset;
-							yDiff = y - object->rect.y;
-						}
-
-						bool otherOne = false;
-
 						if (downscroll)
-							otherOne = yDiff <= -(63 * Game::save->GetDouble("Note Size"));
+							y = object->rect.y - noteOffset;
 						else
-							otherOne = yDiff >= 63 * Game::save->GetDouble("Note Size");
+							y = object->rect.y + noteOffset;
+						yDiff = y - object->heldTilings.back().rect.y;
+					}
+					else
+					{
+						if (downscroll)
+							y = object->rect.y - noteOffset;
+						else
+							y = object->rect.y + noteOffset;
+						yDiff = y - object->rect.y;
+					}
 
-						if (otherOne || object->heldTilings.size() == 0)
-						{
-							object->holdHeight += 63 * Game::save->GetDouble("Note Size");
-							holdTile tile;
-							SDL_FRect rect;
-							tile.active = true;
-							tile.fucked = false;
-							rect.y = y;
-							rect.x = 0;
-							tile.rect = rect;
-							tile.beat = beat;
-							tile.time = i;
-							object->heldTilings.push_back(tile);
-						}
+					bool otherOne = false;
+
+					if (downscroll)
+						otherOne = yDiff <= -(63 * Game::save->GetDouble("Note Size"));
+					else
+						otherOne = yDiff >= 63 * Game::save->GetDouble("Note Size");
+
+					if (otherOne || object->heldTilings.size() == 0)
+					{
+						object->holdHeight += 63 * Game::save->GetDouble("Note Size");
+						holdTile tile;
+						SDL_FRect rect;
+						tile.active = true;
+						tile.fucked = false;
+						rect.y = y;
+						rect.x = 0;
+						tile.rect = rect;
+						tile.beat = beat;
+						tile.time = i;
+						object->heldTilings.push_back(tile);
 					}
 				}
-				std::sort(object->heldTilings.begin(), object->heldTilings.end());
-				notesToPlay.erase(notesToPlay.begin());
-				spawnedNotes.push_back(object);
-				add(object);
 			}
-			else if (n.type == Note_Tail)
-			{
-				notesToPlay.erase(notesToPlay.begin());
-			}
+			std::sort(object->heldTilings.begin(), object->heldTilings.end());
+			notesToPlay.erase(notesToPlay.begin());
+			spawnedNotes.push_back(object);
+			add(object);
+		}
+		else if (n.type == Note_Tail)
+		{
+			notesToPlay.erase(notesToPlay.begin());
+		}
 	}
 	else
 	{
-		if (!ended && spawnedNotes.size() == 0 && notesToPlay.size() == 0 && (positionInSong > (songLength) - 1000))
+		if (!ended && spawnedNotes.size() == 0 && notesToPlay.size() == 0 && (positionInSong > (songLength)-1000))
 		{
 			ended = true;
 
@@ -1028,218 +1028,218 @@ void Gameplay::update(Events::updateEvent event)
 		}
 	}
 
-	
+
 	if (stage->p1->currentTime > 0)
 		stage->p1->currentTime -= Game::deltaTime;
 	if (stage->p1->currentTime <= 0 && stage->p1->sparrow->currentAnim != stage->p1->setAnims["idle"])
 	{
 		stage->p1->play("idle");
 	}
-	
+
 	if (stage->p2->currentTime > 0)
 		stage->p2->currentTime -= Game::deltaTime;
 	if (stage->p2->currentTime <= 0 && stage->p2->sparrow->currentAnim != stage->p2->setAnims["idle"])
 	{
 		stage->p2->play("idle");
 	}
-		for (int i = 0; i < spawnedNotes.size(); i++)
+	for (int i = 0; i < spawnedNotes.size(); i++)
+	{
+		NoteObject* note = spawnedNotes[i];
+
+		if (!note->destroyed)
 		{
-			NoteObject* note = spawnedNotes[i];
+			float wh = SongSelect::currentChart->getTimeFromBeat(note->beat, SongSelect::currentChart->getSegmentFromBeat(note->beat));
 
-			if (!note->destroyed)
+			if (wh - positionInSong < 2)
 			{
-				float wh = SongSelect::currentChart->getTimeFromBeat(note->beat, SongSelect::currentChart->getSegmentFromBeat(note->beat));
-
-				if (wh - positionInSong < 2)
+				if (Game::save->GetBool("hitsounds") && !note->clapped && note->lane >= 4)
 				{
-					if (Game::save->GetBool("hitsounds") && !note->clapped && note->lane >= 4)
+					note->clapped = true;
+					if (SoundManager::getChannelByName("clapFx") != NULL)
+						clap->play();
+				}
+				if ((botplay || note->lane < 4 && (!note->mine || (note->mine && (stage->p2->name == "trickyH" || stage->p2->name == "trickyEx")))) && note->active)
+				{
+					if (note->lane >= 4)
 					{
-						note->clapped = true;
-						if (SoundManager::getChannelByName("clapFx") != NULL)
-							clap->play();
+						float diff = (wh - positionInSong);
+
+						std::string format = std::to_string(diff - fmod(diff, 0.01));
+						format.erase(format.find_last_not_of('0') + 1, std::string::npos);
+
+
+						score += Judge::scoreNote(diff);
+						updateAccuracy(1);
+						combo++;
+
+						createJudgement(judgement::Judge_sick);
+
+						scaleTime = 350;
+						scaleStart = 0;
+
 					}
-					if ((botplay || note->lane < 4 && (!note->mine || (note->mine && (stage->p2->name == "trickyH" || stage->p2->name == "trickyEx")))) && note->active)
+					else
 					{
-						if (note->lane >= 4)
+						receptors[note->lane]->playAnim(laneSuffLower(note->lane) + " confirm", 24, false);
+
+						receptors[note->lane]->centerOrigin = false;
+						receptors[note->lane]->offsetX = 24;
+						receptors[note->lane]->offsetY = 24;
+						if (stage->p2->shake)
+							Game::mainCamera->shake(20, .2);
+						stage->p2->play("sing" + laneSuff(note->lane));
+						if (stage->eventFile)
 						{
-							float diff = (wh - positionInSong);
-
-							std::string format = std::to_string(diff - fmod(diff, 0.01));
-							format.erase(format.find_last_not_of('0') + 1, std::string::npos);
-
-							
-							score += Judge::scoreNote(diff);
-							updateAccuracy(1);
-							combo++;
-						
-							createJudgement(judgement::Judge_sick);
-
-							scaleTime = 350;
-							scaleStart = 0;
-						
-						}
-						else
-						{
-							receptors[note->lane]->playAnim(laneSuffLower(note->lane) + " confirm", 24, false);
-
-							receptors[note->lane]->centerOrigin = false;
-							receptors[note->lane]->offsetX = 24;
-							receptors[note->lane]->offsetY = 24;
-							if (stage->p2->shake)
-								Game::mainCamera->shake(20, .2);
-							stage->p2->play("sing" + laneSuff(note->lane));
-							if (stage->eventFile)
+							for (auto ev : stage->eventFile->events)
 							{
-								for (auto ev : stage->eventFile->events)
-								{
-									if (ev.beat < beat && (ev.length == -1 || ev.length + ev.beat > beat))
-										EventFunction::runSing(ev.name, true);
-								}
-							}
-							if (readyToMove)
-							{
-								readyToMove = false;
-								focus = false;
-							}
-							else if (focus && stage->p1->currentTime < 250)
-							{
-								focus = true;
+								if (ev.beat < beat && (ev.length == -1 || ev.length + ev.beat > beat))
+									EventFunction::runSing(ev.name, true);
 							}
 						}
-						if (!firstHit)
+						if (readyToMove)
 						{
-							firstHit = true;
+							readyToMove = false;
 							focus = false;
 						}
-						note->active = false;
-
-
-					}
-
-				}
-
-				// BEFORE DRAW, CHECK HELD NOTES!!
-
-				if (note->type == Note_Head)
-				{
-					for (int i = 0; i < note->heldTilings.size(); i++)
-					{
-						holdTile& tile = note->heldTilings[i];
-						float wh = SongSelect::currentChart->getTimeFromBeat(tile.beat, SongSelect::currentChart->getSegmentFromBeat(tile.beat));
-						float offset = wh;
-						float timeDiff = offset - positionInSong;
-						if (holding[note->lane] || (botplay || (note->lane < 4 && !note->mine))) // holding that lane!
+						else if (focus && stage->p1->currentTime < 250)
 						{
-
-							if (timeDiff <= Judge::hitWindows[3] && !tile.fucked)
-							{
-								if (note->lane < 4 && timeDiff <= 0 && receptors[note->lane]->animationFinished)
-								{
-									receptors[note->lane]->playAnim(laneSuffLower(note->lane) + " confirm", 24, false);
-
-									receptors[note->lane]->centerOrigin = false;
-									receptors[note->lane]->offsetX = 24;
-									receptors[note->lane]->offsetY = 24;
-								}
-								tile.active = false;
-								if (note->lane < 4)
-									stage->p2->currentTime = 200;
-								else
-									stage->p1->currentTime = 200;
-							}
-						}
-						if (note->lane < 4)
-							continue;
-					}
-
-					if (!holding[note->lane] && lastHolding[note->lane]) // just stopped holding
-					{
-						lastHolding[note->lane] = false;
-
-						if (note->endTime < positionInSong + Judge::hitWindows[1] * 0.7)
-						{
-							removeNote(note); // might end up being weird if many notes are being held.
-							break;
+							focus = true;
 						}
 					}
-				}
-
-				bool fuckOver = false;
-
-				for (int i = 0; i < note->heldTilings.size(); i++)
-				{
-					holdTile& tile = note->heldTilings[i];
-					if (fuckOver)
-						tile.fucked = true;
-				}
-
-				if (note->lane >= 0)
-				{
-					Rect receptorRect;
-					receptorRect.w = receptors[note->lane]->w;
-					receptorRect.h = receptors[note->lane]->h;
-					receptorRect.x = receptors[note->lane]->x;
-					receptorRect.y = receptors[note->lane]->y;
-					note->debug = debug;
-
-					Rect l;
-					l.x = 0;
-					l.y = (receptorRect.y + 52) * camHud->scale;
-					l.w = Game::gameWidth;
-					l.h = Game::gameHeight;
-					if (downscroll)
+					if (!firstHit)
 					{
-						l.y = 0;
-						l.h = receptorRect.y + 52;
+						firstHit = true;
+						focus = false;
 					}
-
-					//SDL_SetRenderTarget(Game::renderer, Game::mainCamera->cameraTexture);
-
-					if (holding[note->lane] || botplay || (note->lane < 4 && !note->mine))
-					{
-						
-						for (NoteObject* obj : spawnedNotes) // reset clips
-						{
-							if (obj->lane == note->lane)
-							{
-								obj->clipRect = l;
-							}
-						}
-						
-					}
-
-				}
-
-				if (wh - positionInSong <= -Judge::hitWindows[2] && note->active && playing && !note->mine)
-				{
 					note->active = false;
-					miss(note);
+
+
 				}
 
-				bool condition = true;
+			}
 
+			// BEFORE DRAW, CHECK HELD NOTES!!
 
-				if ((wh - positionInSong <= -200 && !note->active) && note->holdsActive == 0 && playing)
-				{
-					removeNote(note);
-				}
-
+			if (note->type == Note_Head)
+			{
 				for (int i = 0; i < note->heldTilings.size(); i++)
 				{
 					holdTile& tile = note->heldTilings[i];
-
-					float whHold = SongSelect::currentChart->getTimeFromBeat(tile.beat, SongSelect::currentChart->getSegmentFromBeat(tile.beat));
-					float diff = whHold - positionInSong;
-
-					if (diff < -Judge::hitWindows[1] && tile.active && playing)
+					float wh = SongSelect::currentChart->getTimeFromBeat(tile.beat, SongSelect::currentChart->getSegmentFromBeat(tile.beat));
+					float offset = wh;
+					float timeDiff = offset - positionInSong;
+					if (holding[note->lane] || (botplay || (note->lane < 4 && !note->mine))) // holding that lane!
 					{
-						miss(note);
-						removeNote(note);
+
+						if (timeDiff <= Judge::hitWindows[3] && !tile.fucked)
+						{
+							if (note->lane < 4 && timeDiff <= 0 && receptors[note->lane]->animationFinished)
+							{
+								receptors[note->lane]->playAnim(laneSuffLower(note->lane) + " confirm", 24, false);
+
+								receptors[note->lane]->centerOrigin = false;
+								receptors[note->lane]->offsetX = 24;
+								receptors[note->lane]->offsetY = 24;
+							}
+							tile.active = false;
+							if (note->lane < 4)
+								stage->p2->currentTime = 200;
+							else
+								stage->p1->currentTime = 200;
+						}
+					}
+					if (note->lane < 4)
+						continue;
+				}
+
+				if (!holding[note->lane] && lastHolding[note->lane]) // just stopped holding
+				{
+					lastHolding[note->lane] = false;
+
+					if (note->endTime < positionInSong + Judge::hitWindows[1] * 0.7)
+					{
+						removeNote(note); // might end up being weird if many notes are being held.
 						break;
 					}
 				}
 			}
+
+			bool fuckOver = false;
+
+			for (int i = 0; i < note->heldTilings.size(); i++)
+			{
+				holdTile& tile = note->heldTilings[i];
+				if (fuckOver)
+					tile.fucked = true;
+			}
+
+			if (note->lane >= 0)
+			{
+				Rect receptorRect;
+				receptorRect.w = receptors[note->lane]->w;
+				receptorRect.h = receptors[note->lane]->h;
+				receptorRect.x = receptors[note->lane]->x;
+				receptorRect.y = receptors[note->lane]->y;
+				note->debug = debug;
+
+				Rect l;
+				l.x = 0;
+				l.y = (receptorRect.y + 52) * camHud->scale;
+				l.w = Game::gameWidth;
+				l.h = Game::gameHeight;
+				if (downscroll)
+				{
+					l.y = 0;
+					l.h = receptorRect.y + 52;
+				}
+
+				//SDL_SetRenderTarget(Game::renderer, Game::mainCamera->cameraTexture);
+
+				if (holding[note->lane] || botplay || (note->lane < 4 && !note->mine))
+				{
+
+					for (NoteObject* obj : spawnedNotes) // reset clips
+					{
+						if (obj->lane == note->lane)
+						{
+							obj->clipRect = l;
+						}
+					}
+
+				}
+
+			}
+
+			if (wh - positionInSong <= -Judge::hitWindows[2] && note->active && playing && !note->mine)
+			{
+				note->active = false;
+				miss(note);
+			}
+
+			bool condition = true;
+
+
+			if ((wh - positionInSong <= -200 && !note->active) && note->holdsActive == 0 && playing)
+			{
+				removeNote(note);
+			}
+
+			for (int i = 0; i < note->heldTilings.size(); i++)
+			{
+				holdTile& tile = note->heldTilings[i];
+
+				float whHold = SongSelect::currentChart->getTimeFromBeat(tile.beat, SongSelect::currentChart->getSegmentFromBeat(tile.beat));
+				float diff = whHold - positionInSong;
+
+				if (diff < -Judge::hitWindows[1] && tile.active && playing)
+				{
+					miss(note);
+					removeNote(note);
+					break;
+				}
+			}
 		}
+	}
 
 	for (int i = 0; i < receptors.size(); i++)
 	{
@@ -1284,7 +1284,7 @@ void Gameplay::update(Events::updateEvent event)
 			smokes.erase(std::remove(smokes.begin(), smokes.end(), smokes[i]), smokes.end());
 		}
 	}
-	
+
 }
 
 void Gameplay::cleanUp()
@@ -1293,139 +1293,139 @@ void Gameplay::cleanUp()
 
 void Gameplay::keyDown(SDL_KeyboardEvent event)
 {
-	
+
 
 	switch (event.keysym.sym)
 	{
-		case SDLK_ESCAPE:
-			
-			
-			SongSelect::currentChart->destroy();
-			cleanUp();
-			Game::instance->transitionToMenu(new MainMenu());
-		
-			return;
-		case SDLK_F1:
-			
-			botplay = !botplay;
-			return;
-		case SDLK_F2:
-			debug = !debug;
-			break;
-		case SDLK_BACKQUOTE:
-			if (play)
-			{
-				notesToPlay.clear();
-				notesToPlay = SongSelect::currentChart->meta.difficulties[SongSelect::selectedDiffIndex].notes;
-				startProg = 0;
-				for (NoteObject* obj : spawnedNotes) // reset clips
-				{
-					if (obj)
-					{
-						removeObj(obj);
-						delete obj;
-					}
-				}
+	case SDLK_ESCAPE:
 
+
+		SongSelect::currentChart->destroy();
+		cleanUp();
+		Game::instance->transitionToMenu(new MainMenu());
+
+		return;
+	case SDLK_F1:
+
+		botplay = !botplay;
+		return;
+	case SDLK_F2:
+		debug = !debug;
+		break;
+	case SDLK_BACKQUOTE:
+		if (play)
+		{
+			notesToPlay.clear();
+			notesToPlay = SongSelect::currentChart->meta.difficulties[SongSelect::selectedDiffIndex].notes;
+			startProg = 0;
+			for (NoteObject* obj : spawnedNotes) // reset clips
+			{
+				if (obj)
+				{
+					removeObj(obj);
+					delete obj;
+				}
+			}
+
+			song->stop();
+			clap->stop();
+			float thing = ((60 / SongSelect::currentChart->getSegmentFromTime(0).bpm) * 1000);
+			positionInSong = -(thing * 12);
+
+			combo = 0;
+			score = 0;
+			botplay = false;
+			play = false;
+			CB = 0;
+			ended = false;
+			notesHit = 0;
+			notesPlayed = 0;
+			accuracy = 0;
+
+			firstHit = false;
+
+			Game::mainView->x = stage->viewPointPos.x;
+			Game::mainView->y = stage->viewPointPos.y;
+			focus = false;
+
+			stage->p1->play("idle");
+			stage->p2->play("idle");
+
+			updateAccuracy(0);
+
+			spawnedNotes.clear();
+		}
+		return;
+	case SDLK_SPACE:
+		if (Game::instance->flowtime)
+		{
+			if (playing)
+			{
+				playing = false;
 				song->stop();
-				clap->stop();
-				float thing = ((60 / SongSelect::currentChart->getSegmentFromTime(0).bpm) * 1000);
-				positionInSong = -(thing * 12);
-
-				combo = 0;
-				score = 0;
-				botplay = false;
-				play = false;
-				CB = 0;
-				ended = false;
-				notesHit = 0;
-				notesPlayed = 0;
-				accuracy = 0;
-
-				firstHit = false;
-
-				Game::mainView->x = stage->viewPointPos.x;
-				Game::mainView->y = stage->viewPointPos.y;
-				focus = false;
-
-				stage->p1->play("idle");
-				stage->p2->play("idle");
-
-				updateAccuracy(0);
-
-				spawnedNotes.clear();
 			}
-			return;
-		case SDLK_SPACE:
-			if (Game::instance->flowtime )
+			else
 			{
-				if (playing)
-				{
-					playing = false;
-					song->stop();
-				}
-				else
-				{ 
-					Game::instance->db_addLine("Set pos to " + std::to_string(positionInSong));
-					song->play();
-					song->setPos(positionInSong - 50);
-					playing = true;
-				}
-				
+				Game::instance->db_addLine("Set pos to " + std::to_string(positionInSong));
+				song->play();
+				song->setPos(positionInSong - 50);
+				playing = true;
 			}
-			break;
-		case SDLK_UP:
-			if (Game::instance->flowtime)
+
+		}
+		break;
+	case SDLK_UP:
+		if (Game::instance->flowtime)
+		{
+			if (!playing)
+				positionInSong -= 10;
+			else
 			{
-				if (!playing)
-					positionInSong -= 10;
-				else
-				{
-					playing = false;
-					song->stop();
-					positionInSong -= 10;
-				}
+				playing = false;
+				song->stop();
+				positionInSong -= 10;
 			}
-			break;
-		case SDLK_DOWN:
-			if (Game::instance->flowtime)
+		}
+		break;
+	case SDLK_DOWN:
+		if (Game::instance->flowtime)
+		{
+			if (!playing)
+				positionInSong += 10;
+			else
 			{
-				if (!playing)
-					positionInSong += 10;
-				else
-				{
-					playing = false;
-					song->stop();
-					positionInSong += 10;
-				}
+				playing = false;
+				song->stop();
+				positionInSong += 10;
 			}
-			break;
-		case SDLK_EQUALS:
-			if (Game::instance->flowtime)
+		}
+		break;
+	case SDLK_EQUALS:
+		if (Game::instance->flowtime)
+		{
+			if (playing)
 			{
-				if (playing)
-				{
-					playing = false;
-					song->stop();
-				}
-				rate += 0.1;
-				song->rateChange(rate);
-				Game::instance->db_addLine("rate changed to " + std::to_string(rate));
+				playing = false;
+				song->stop();
 			}
-			break;
-		case SDLK_MINUS:
-			if (Game::instance->flowtime)
+			rate += 0.1;
+			song->rateChange(rate);
+			Game::instance->db_addLine("rate changed to " + std::to_string(rate));
+		}
+		break;
+	case SDLK_MINUS:
+		if (Game::instance->flowtime)
+		{
+			if (playing)
 			{
-				if (playing)
-				{
-					playing = false;
-					song->stop();
-				}
-				rate -= 0.1;
-				song->rateChange(rate);
-				Game::instance->db_addLine("rate changed to " + std::to_string(rate));
+				playing = false;
+				song->stop();
 			}
-			break;
+			rate -= 0.1;
+			song->rateChange(rate);
+			Game::instance->db_addLine("rate changed to " + std::to_string(rate));
+		}
+		break;
 	}
 
 	// hit notes
@@ -1528,7 +1528,7 @@ void Gameplay::keyDown(SDL_KeyboardEvent event)
 					}
 				}
 				receptors[closestObject->lane]->playAnim(laneSuffLower(closestObject->lane) + " confirm", 24, false);
-				
+
 				receptors[closestObject->lane]->centerOrigin = false;
 				receptors[closestObject->lane]->offsetX = 24;
 				receptors[closestObject->lane]->offsetY = 24;
@@ -1551,43 +1551,41 @@ void Gameplay::keyDown(SDL_KeyboardEvent event)
 				std::string format = std::to_string(diff - fmod(diff, 0.01));
 				format.erase(format.find_last_not_of('0') + 1, std::string::npos);
 
-				
+
 
 				switch (judge)
 				{
-					case judgement::Judge_sick:
-						updateAccuracy(1);
-						health += 0.04;
-						break;
-					case judgement::Judge_good:
-						updateAccuracy(0.8);
-						health += 0.02;
-						break;
-					case judgement::Judge_bad:
-						updateAccuracy(0.5);
-						health += 0.01;
-						break;
-					case judgement::Judge_shit:
-						updateAccuracy(0.1);
-						health -= 0.01;
-						break;
-					}
-
-					if (health > 1)
-						health = 1;
-					if (health < 0)
-						health = 0;
-					combo++;
-					createJudgement(judge);
-
-					scaleTime = 350;
-					scaleStart = 0;
+				case judgement::Judge_sick:
+					updateAccuracy(1);
+					health += 0.04;
+					break;
+				case judgement::Judge_good:
+					updateAccuracy(0.8);
+					health += 0.02;
+					break;
+				case judgement::Judge_bad:
+					updateAccuracy(0.5);
+					health += 0.01;
+					break;
+				case judgement::Judge_shit:
+					updateAccuracy(0.1);
+					health -= 0.01;
 					break;
 				}
+
+				if (health > 1)
+					health = 1;
+				if (health < 0)
+					health = 0;
+				combo++;
+				createJudgement(judge);
+
+				scaleTime = 350;
+				scaleStart = 0;
+				break;
+			}
 		}
 	}
-	
-	
 }
 
 void Gameplay::keyUp(SDL_KeyboardEvent ev)

@@ -108,7 +108,7 @@ long WINAPI UnhandledExceptionFilterHandler(LPEXCEPTION_POINTERS ex) {
 INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	PSTR lpCmdLine, INT nCmdShow)
 {
-		
+
 
 	SetUnhandledExceptionFilter(UnhandledExceptionFilterHandler);
 	//AddVectoredExceptionHandler(1, &PvectoredExceptionHandler);
@@ -120,14 +120,14 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	}
 	Game::version = "Tricky Version 3";
 
-	#ifdef  _DEBUG
+#ifdef  _DEBUG
 	AllocConsole();
 	freopen("conout$", "w", stdout);
-	#else
+#else
 	freopen("log.txt", "w", stdout);
-	#endif
+#endif
 
-	BASS_Init(-1,44100,0,NULL,NULL);
+	BASS_Init(-1, 44100, 0, NULL, NULL);
 
 	bool fullscreen = false;
 
@@ -313,6 +313,6 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	SDL_DestroyWindow(window);
 
 	SDL_Quit();
-		
+
 	return 0;
 }

@@ -8,7 +8,7 @@ void SettingsMenu::refreshList() {
 	for (bruhhh t : settings)
 		removeObj(t.display);
 	settings.clear();
-	
+
 
 	for (int i = 0; i < Game::save->settings.size(); i++)
 	{
@@ -184,7 +184,7 @@ void SettingsMenu::keyDown(SDL_KeyboardEvent event)
 	case SDLK_LEFT:
 		if (waitingKey || b.set->isKeybind)
 			return;
-	
+
 		if (!b.set->takesActive)
 		{
 			double prev = b.set->value;
@@ -205,7 +205,7 @@ void SettingsMenu::keyDown(SDL_KeyboardEvent event)
 	case SDLK_RIGHT:
 		if (waitingKey || b.set->isKeybind)
 			return;
-		
+
 		if (!b.set->takesActive)
 		{
 			double prev = b.set->value;
