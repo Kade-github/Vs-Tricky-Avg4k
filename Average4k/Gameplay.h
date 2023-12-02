@@ -118,6 +118,7 @@ class Gameplay :
 
 		bool keys[8];
 		bool holding[8];
+		bool lastHolding[8];
 		float startTime = 0;
 
 		AvgGroup* icons;

@@ -1042,8 +1042,6 @@ void Gameplay::update(Events::updateEvent event)
 	{
 		stage->p2->play("idle");
 	}
-
-	{
 		for (int i = 0; i < spawnedNotes.size(); i++)
 		{
 			NoteObject* note = spawnedNotes[i];
@@ -1124,16 +1122,18 @@ void Gameplay::update(Events::updateEvent event)
 
 				if (note->type == Note_Head)
 				{
-					if (holding[note->lane] || (botplay || (note->lane < 4 && !note->mine))) // holding that lane!
+					for (int i = 0; i < note->heldTilings.size(); i++)
 					{
-						for (int i = 0; i < note->heldTilings.size(); i++)
+						holdTile& tile = note->heldTilings[i];
+						float wh = SongSelect::currentChart->getTimeFromBeat(tile.beat, SongSelect::currentChart->getSegmentFromBeat(tile.beat));
+						float offset = wh;
+						float timeDiff = offset - positionInSong;
+						if (holding[note->lane] || (botplay || (note->lane < 4 && !note->mine))) // holding that lane!
 						{
-							holdTile& tile = note->heldTilings[i];
-							float wh = SongSelect::currentChart->getTimeFromBeat(tile.beat, SongSelect::currentChart->getSegmentFromBeat(tile.beat));
-							float offset = wh;
-							if (offset - positionInSong <= (Judge::hitWindows[3] * 1.2) && !tile.fucked)
+
+							if (timeDiff <= Judge::hitWindows[3] && !tile.fucked)
 							{
-								if (note->lane < 4 && offset - positionInSong > 0 && offset - positionInSong < (Judge::hitWindows[1] * 0.5) && receptors[note->lane]->animationFinished)
+								if (note->lane < 4 && timeDiff <= 0 && receptors[note->lane]->animationFinished)
 								{
 									receptors[note->lane]->playAnim(laneSuffLower(note->lane) + " confirm", 24, false);
 
@@ -1147,6 +1147,19 @@ void Gameplay::update(Events::updateEvent event)
 								else
 									stage->p1->currentTime = 200;
 							}
+						}
+						if (note->lane < 4)
+							continue;
+					}
+
+					if (!holding[note->lane] && lastHolding[note->lane]) // just stopped holding
+					{
+						lastHolding[note->lane] = false;
+
+						if (note->endTime < positionInSong + Judge::hitWindows[1] * 0.7)
+						{
+							removeNote(note); // might end up being weird if many notes are being held.
+							break;
 						}
 					}
 				}
@@ -1218,9 +1231,8 @@ void Gameplay::update(Events::updateEvent event)
 					float whHold = SongSelect::currentChart->getTimeFromBeat(tile.beat, SongSelect::currentChart->getSegmentFromBeat(tile.beat));
 					float diff = whHold - positionInSong;
 
-					if (diff < -Judge::hitWindows[2] && tile.active && playing)
+					if (diff < -Judge::hitWindows[1] && tile.active && playing)
 					{
-						std::cout << note->lane << " fucked " << diff << " time: " << whHold << " song: " << positionInSong << std::endl;
 						miss(note);
 						removeNote(note);
 						break;
@@ -1228,7 +1240,6 @@ void Gameplay::update(Events::updateEvent event)
 				}
 			}
 		}
-	}
 
 	for (int i = 0; i < receptors.size(); i++)
 	{
@@ -1461,7 +1472,10 @@ void Gameplay::keyDown(SDL_KeyboardEvent event)
 				keys[control.lane] = true;
 				if (closestObject)
 					if (closestObject->holdsActive > 0)
+					{
 						holding[control.lane] = true;
+						lastHolding[control.lane] = false;
+					}
 
 			}
 			else
@@ -1585,6 +1599,7 @@ void Gameplay::keyUp(SDL_KeyboardEvent ev)
 		if (control.code == ev.keysym.sym)
 		{
 			keys[control.lane] = false;
+			lastHolding[control.lane] = true;
 			holding[control.lane] = false;
 		}
 	}
