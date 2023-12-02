@@ -14,7 +14,7 @@ spritesScroll[background]: 0.95
 ### characters
 
 p1: boyfriend
-p1Pos: 740,260
+p1Pos: 740,285
 # optional, this is for the times where bf's camera doesn't actually fit in the world or something
 p1ViewOffset: -75,-130
 # scale is always optional, but for characters it's recommended
