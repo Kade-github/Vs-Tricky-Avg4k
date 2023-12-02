@@ -525,8 +525,8 @@ float lastBPM = 0;
 
 void Gameplay::update(Events::updateEvent event)
 {
-	float thing = ((60 / SongSelect::currentChart->getSegmentFromTime(0).bpm) * 1000);
-	if (startTimeDur < thing)
+	float bpms = ((60 / SongSelect::currentChart->getSegmentFromTime(0).bpm) * 1000);
+	if (startTimeDur < bpms)
 		startTimeDur += Game::deltaTime;
 	if (positionInSong > startTime)
 	{
@@ -541,12 +541,14 @@ void Gameplay::update(Events::updateEvent event)
 	}
 	else
 	{
-		if (startTimeDur > thing)
+		if (startTimeDur > bpms)
 		{
 			startTimeDur = 0;
 			switch (startProg)
 			{
 			case 0:
+				SoundManager::removeChannel("startChannel");
+				startSound = SoundManager::createChannel("assets/sounds/intro3.ogg", "startChannel");
 				startSound->play();
 				break;
 			case 1:
@@ -570,10 +572,6 @@ void Gameplay::update(Events::updateEvent event)
 				startSound = SoundManager::createChannel("assets/sounds/introGo.ogg", "startChannel");
 				startSprite->playAnim("go", 24, false);
 				startSound->play();
-				break;
-			case 4:
-				SoundManager::removeChannel("startChannel");
-				startSound = SoundManager::createChannel("assets/sounds/intro3.ogg", "startChannel");
 				positionInSong = 0;
 				break;
 			}
@@ -584,11 +582,12 @@ void Gameplay::update(Events::updateEvent event)
 				startSprite->alpha = 1;
 			}
 			startProg++;
-		}
 
+		}
 	}
+
 	if (startSprite->alpha > 0.0)
-		startSprite->alpha = lerp(1, 0, startTimeDur / thing);
+		startSprite->alpha = lerp(1, 0, startTimeDur / bpms);
 
 
 	positionInSong += Game::deltaTime;
@@ -1196,17 +1195,9 @@ void Gameplay::update(Events::updateEvent event)
 				//SDL_SetRenderTarget(Game::renderer, Game::mainCamera->cameraTexture);
 
 				if (holding[note->lane] || botplay || (note->lane < 4 && !note->mine))
-				{
-
-					for (NoteObject* obj : spawnedNotes) // reset clips
-					{
-						if (obj->lane == note->lane)
-						{
-							obj->clipRect = l;
-						}
-					}
-
-				}
+					note->clipRect = l;
+				else
+					note->clipRect = {};
 
 			}
 
