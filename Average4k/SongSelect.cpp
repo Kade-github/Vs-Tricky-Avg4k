@@ -18,7 +18,7 @@ void SongSelect::updateList() {
 
 			std::transform(bruh.begin(), bruh.end(), bruh.begin(),
 				[](unsigned char c) { return std::tolower(c); });
-			if (ends_with(bruh, ".sm"))
+			if (ends_with(bruh, ".sm") || ends_with(bruh,".ssc"))
 			{
 				song s;
 				s.type = StepMania;
