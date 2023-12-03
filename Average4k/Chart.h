@@ -34,6 +34,11 @@ struct note {
 	bool killed;
 };
 
+struct label {
+	float beat;
+	std::string text;
+};
+
 struct difficulty
 {
 	std::string name;
@@ -50,6 +55,7 @@ class chartMeta {
 		std::vector<bpmSegment> bpms;
 		std::vector<stopSegment> stops;
 		std::vector<difficulty> difficulties;
+		std::vector<label> labels;
 		float chartOffset;
 		int chartType = 0;
 };

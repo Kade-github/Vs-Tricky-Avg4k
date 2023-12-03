@@ -16,11 +16,14 @@ SMFile::SMFile(std::string path, std::string folder, bool doReplace = true) {
     bool readingNotes = false;
     bool readingBPMS = false;
     bool readingSTOPS = false;
+    bool readingLabels = false;
     int bpmIndex = 0;
 
     int diffIndex = 0;
     float beat = 0;
     int measureIndex = 0;
+
+    std::string diffName = "";
 
     std::unique_ptr<std::vector < std::string >> measure = std::make_unique<std::vector<std::string>>();
 
@@ -88,6 +91,21 @@ SMFile::SMFile(std::string path, std::string folder, bool doReplace = true) {
 
                     }
                 }
+                else if (readingLabels)
+                {
+                    if (iss.str() == ";" || iss.str()[0] == '#')
+                        readingLabels = false;
+                    else
+                    {
+                        stuff[0].erase(std::remove(stuff[0].begin(), stuff[0].end(), ','), stuff[0].end());
+                        std::vector < std::string > labels = Chart::split(stuff[0], '=');
+                        label seg;
+                        seg.beat = std::stod(labels[0]);
+                        seg.text = labels[1];
+
+                        meta.labels.push_back(seg);
+                    }
+                }
                 if (!readingBPMS && !readingSTOPS)
                 {
 
@@ -144,6 +162,25 @@ SMFile::SMFile(std::string path, std::string folder, bool doReplace = true) {
                             }
                         }
 
+                        if (stuff[0] == "#LABELS") {
+                            readingLabels = true;
+                            if (stuff.size() != 1)
+                            {
+                                std::vector < std::string > labels = Chart::split(stuff[1], ',');
+                                if (labels.size() != 0)
+                                {
+                                    for (int ii = 0; ii < labels.size(); ii += 2)
+                                    {
+                                        label seg;
+                                        seg.beat = std::stod(Chart::split(labels[ii], '=')[0]);
+                                        seg.text = Chart::split(labels[ii], '=')[1];
+
+                                        meta.labels.push_back(seg);
+                                    }
+                                }
+                            }
+                        }
+
                         if (stuff[0] == "#NOTES") {
                             readingNotes = true;
                             difficulty diff;
@@ -162,6 +199,9 @@ SMFile::SMFile(std::string path, std::string folder, bool doReplace = true) {
                                 meta.audio = stuff[1];
                             if (stuff[0] == "#OFFSET")
                                 meta.chartOffset = std::stof(stuff[1]);
+
+                            if (stuff[0] == "#DIFFICULTY") // .ssc diff name
+                                diffName = stuff[1];
                         }
                     }
                 }
@@ -179,9 +219,15 @@ SMFile::SMFile(std::string path, std::string folder, bool doReplace = true) {
                         meta.difficulties.back().name = stuff[0];
                         break;
                     }
+
                     diffIndex++;
                 }
                 else {
+                    if (diffName != "")
+                    {
+                        meta.difficulties.back().name = diffName;
+                        diffName = "";
+                    }
                     diffIndex = 0;
 
                     // NOTE STUFF!!!!!
