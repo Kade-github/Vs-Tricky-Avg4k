@@ -99,7 +99,7 @@ void NoteObject::draw() {
             AvgFrame holdFrame;
             std::string suffix = " hold";
             if (i == heldTilings.size() - 1)
-                suffix = " tail";
+                suffix = " end";
             switch (lane % 4)
             {
             case 0:

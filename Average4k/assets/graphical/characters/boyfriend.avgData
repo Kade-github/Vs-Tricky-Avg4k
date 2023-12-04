@@ -1,6 +1,7 @@
-sheet: BoyFriend_Assets
+sheet: boyfriend
 
 setAnim[idle]: BF idle dance
+setAnim[hey]: BF HEY!!
 setAnim[singUP]: BF NOTE UP
 setAnim[singRIGHT]: BF NOTE RIGHT
 setAnim[singLEFT]: BF NOTE LEFT

@@ -391,7 +391,7 @@ void Gameplay::create() {
 		r->tex = noteskin;
 		r->setSparrow("assets/graphical/fnfBase/Arrows.xml");
 
-		r->playAnim("arrow" + laneSuff(i), 24, false);
+		r->playAnim("arrow static", 24, false);
 		r->staticView = true;
 
 		receptors.push_back(r);
@@ -413,7 +413,7 @@ void Gameplay::create() {
 		r->tex = noteskin;
 		r->setSparrow("assets/graphical/fnfBase/Arrows.xml");
 
-		r->playAnim("arrow" + laneSuff(i), 24, false);
+		r->playAnim("arrow static", 24, false);
 
 		r->staticView = true;
 		receptors.push_back(r);
