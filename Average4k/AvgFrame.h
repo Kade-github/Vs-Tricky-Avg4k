@@ -187,11 +187,7 @@ public:
 			selectRect.x = node.attribute("x").as_int();
 			selectRect.y = node.attribute("y").as_int();
 			selectRect.w = node.attribute("width").as_int();
-			if (selectRect.w == 0)
-				selectRect.w = node.attribute("frameWidth").as_int();
 			selectRect.h = node.attribute("height").as_int();
-			if (selectRect.h == 0)
-				selectRect.h = node.attribute("frameHeight").as_int();
 
 			// this exists because opengl uses normalized coordinates
 			// ie, 0->1
@@ -209,15 +205,11 @@ public:
 			frame.srcRect = rect;
 
 			Rect r;
-			r.x = -node.attribute("frameX").as_int();
-			r.y = -node.attribute("frameY").as_int();
+			r.x = 0;
+			r.y = 0;
 			r.w = node.attribute("width").as_int();
 			r.h = node.attribute("height").as_int();
 
-			if (r.w > node.attribute("frameWidth").as_int() && node.attribute("frameWidth").as_int() != 0)
-				r.w = node.attribute("frameWidth").as_int();
-			if (r.h > node.attribute("frameHeight").as_int() && node.attribute("frameHeight").as_int() != 0)
-				r.h = node.attribute("frameHeight").as_int();
 			frame.frameRect = r;
 
 			curAnim.frames.push_back(frame);

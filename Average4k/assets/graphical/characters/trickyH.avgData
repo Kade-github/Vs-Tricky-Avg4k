@@ -1,10 +1,10 @@
 sheet: HTricky
 
-setAnim[idle]: Proper Idle
-setAnim[singUP]: Proper Up
-setAnim[singRIGHT]: Proper Right
-setAnim[singLEFT]: Proper Left
-setAnim[singDOWN]: Proper Down
+setAnim[idle]: Idle
+setAnim[singUP]: Up
+setAnim[singRIGHT]: Right
+setAnim[singLEFT]: Left
+setAnim[singDOWN]: Down
 
 animOffset[singDOWN]: 29,-475
 animOffset[idle]: 0,0

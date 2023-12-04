@@ -137,6 +137,13 @@ void Offseter::create()
 	hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_ALL,
 		IID_IFileOpenDialog, reinterpret_cast<void**>(&pFileOpen));
 
+    COMDLG_FILTERSPEC fileTypes[] =
+    {
+        { L"All supported files", L"*.avgData" },
+    };
+
+    pFileOpen->SetFileTypes(ARRAYSIZE(fileTypes), fileTypes);
+
 	hr = pFileOpen->Show(NULL);
 
     if (SUCCEEDED(hr))

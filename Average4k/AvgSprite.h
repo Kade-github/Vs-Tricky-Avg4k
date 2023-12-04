@@ -193,8 +193,8 @@ public:
 			}
 			AvgFrame fr = sparrow->getRectFromFrame(frame);
  			srcRect = fr.srcRect;
-			dstRect.x = uX + ((fr.frameRect.x * (scale * Game::mainView->zoom)) + mpx);
-			dstRect.y = uY + ((fr.frameRect.y * (scale * Game::mainView->zoom)) + mpy);
+			dstRect.x = uX - ((fr.frameRect.x * (scale * Game::mainView->zoom)) + mpx);
+			dstRect.y = uY - ((fr.frameRect.y * (scale * Game::mainView->zoom)) + mpy);
 			
 
 
